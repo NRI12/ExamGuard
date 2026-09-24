@@ -1,0 +1,13 @@
+torch>=2.1
+torchvision>=0.16
+pytorchvideo @ git+https://github.com/facebookresearch/pytorchvideo.git
+ultralytics>=8.3
+lap
+opencv-python
+numpy
+scikit-learn
+pyyaml
+tqdm
+tensorboard
+gdown>=5
+requests

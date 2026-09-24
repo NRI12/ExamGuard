@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cheating-detection-v1"
+version = "1.0.0"
+description = "Exam cheating detection v1: per-person X3D-L video classifier, 4 classes"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.1",
+    "torchvision>=0.16",
+    "pytorchvideo @ git+https://github.com/facebookresearch/pytorchvideo.git",
+    "ultralytics>=8.3",
+    "lap",
+    "opencv-python",
+    "numpy",
+    "scikit-learn",
+    "pyyaml",
+    "tqdm",
+    "tensorboard",
+    "gdown>=5",
+    "requests",
+]
+
+[project.scripts]
+cheating-v1 = "cheating_v1.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

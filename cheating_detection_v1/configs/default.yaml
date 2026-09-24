@@ -1,0 +1,71 @@
+# cheating_detection_v1: per-person X3D-L video classifier, 4 classes.
+# Relative paths resolve against the project root (the folder holding configs/).
+# Override any value on the command line: --set train.epochs=15 app.thr_on=0.9
+
+project: cheating_detection_v1
+
+paths:
+  raw_data: data/raw/DOAN1/annotations   # CVAT exports: cvat_zip/*_cvat_v1.zip, backup/*_task_backup.zip
+  videos: data/videos                    # session videos extracted from the task backups
+  clips: data/processed/clips_hr         # per-person clips + train.csv / val.csv / meta.csv
+  outputs: outputs                       # training runs, evaluations, app results
+  weights: weights/x3d_l_v1_best.pt      # model used by evaluate / infer / eval-videos
+
+data:
+  source_url: <DOAN1_DATASET_URL>   # DOAN1 (download)
+  classes: [normal, looking, interaction, phone_cheatsheet]
+  label_map:                             # CVAT label -> class index (hard negatives count as normal)
+    hard_negative: 0
+    suspicious_looking: 1
+    communicating: 2
+    exchange_object: 2
+    using_phone/cheat_sheet: 3
+  related_labels: [communicating, exchange_object]   # the other person of a pair also gets the label
+  val_sessions: [S07, S08]
+  fps: 25
+  clip_len: 100                          # frames per clip (4 s)
+  clip_size: 356                         # stored clip resolution (px)
+  event_stride: 40                       # sliding-window step inside long events
+  crop_pad: 0.15
+  normal_margin: 50                      # frames kept clear of any event when sampling normal clips
+  normal_per_person_min: 1.5             # normal clips per person per minute of video
+  seed: 0
+
+model:
+  name: x3d_l                            # x3d_xs | x3d_s | x3d_m | x3d_l (pytorchvideo, Kinetics-400)
+  stride: 5                              # frame stride: 16 x 5 = 3.2 s at 25 fps
+  dropout: 0.5
+
+train:
+  epochs: 30
+  warmup: 2.0
+  batch_size: 12
+  lr: 0.001                              # head; backbone uses lr * backbone_lr_mult
+  backbone_lr_mult: 0.2
+  weight_decay: 0.05
+  label_smoothing: 0.1
+  mixup: 0.2
+  mixup_prob: 0.5
+  ema: 0.99
+  hard_neg_boost: 3.0
+  drop_related: false
+  workers: auto                          # dataloader processes; auto = container CPUs - 1 (max 11)
+  test_views: 3
+  max_steps: 0                           # >0: debug, stop each epoch after N steps
+  seed: 0
+
+app:
+  detector: yolo11m.pt
+  det_conf: 0.3
+  det_imgsz: 640
+  infer_every: 1.0                       # seconds between classifier runs
+  smooth: 3                              # windows averaged per track
+  thr_on: 0.85                           # cheat_score raising an alert
+  thr_off: 0.70                          # cheat_score clearing it
+  min_windows: 2                         # alerts shorter than this are dropped
+  min_coverage: 0.75
+  box_map:                               # YOLO box -> annotated "upper body + desk" box (fractions of YOLO width)
+    dx1: -0.101
+    dx2: 0.094
+    dy1: -0.131
+    h: 1.021
