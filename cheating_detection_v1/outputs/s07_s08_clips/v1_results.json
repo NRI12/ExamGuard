@@ -1,0 +1,102 @@
+[
+ {
+  "clip": "looking_S07_0020-0054s",
+  "session": "S07",
+  "start_s": "20.3",
+  "end_s": "54.9",
+  "kind": "event",
+  "ground_truth": "15.0-19.6s P6 suspicious_looking/look_left",
+  "v1_alerts": "19.0-21.0s #5 looking (0.96)",
+  "class": "looking"
+ },
+ {
+  "clip": "interaction_S07_0106-0142s",
+  "session": "S07",
+  "start_s": "106.5",
+  "end_s": "142.8",
+  "kind": "event",
+  "ground_truth": "15.0-21.3s P1->P2 communicating/whisper",
+  "v1_alerts": "3.0-5.0s #5 interaction (0.95) | 19.0-24.0s #5 interaction (0.96) | 19.0-25.0s #6 interaction (0.96)",
+  "class": "interaction"
+ },
+ {
+  "clip": "interaction_S07_0299-0335s",
+  "session": "S07",
+  "start_s": "299.3",
+  "end_s": "335.1",
+  "kind": "event",
+  "ground_truth": "15.0-20.8s P2->P4 exchange_object/return_object",
+  "v1_alerts": "3.0-5.0s #2 interaction (0.94) | 18.0-23.0s #1 interaction (0.99) | 19.0-21.0s #4 interaction (0.96)",
+  "class": "interaction"
+ },
+ {
+  "clip": "phone_cheatsheet_S07_0054-0099s",
+  "session": "S07",
+  "start_s": "54.6",
+  "end_s": "99.6",
+  "kind": "event",
+  "ground_truth": "15.0-30.6s P4 using_phone/cheat_sheet/phone_on_desk | 41.7-45.6s P5 hard_negative/raise_hand",
+  "v1_alerts": "18.0-33.0s #1 phone_cheatsheet (0.97) | 38.0-39.0s #1 interaction (0.85)",
+  "class": "phone_cheatsheet"
+ },
+ {
+  "clip": "normal_S07_0545-0575s",
+  "session": "S07",
+  "start_s": "545",
+  "end_s": "575.0",
+  "kind": "normal",
+  "ground_truth": "none",
+  "v1_alerts": "6.0-23.0s #3 phone_cheatsheet (0.96)",
+  "class": "normal"
+ },
+ {
+  "clip": "looking_S08_0009-0045s",
+  "session": "S08",
+  "start_s": "9.0",
+  "end_s": "45.7",
+  "kind": "event",
+  "ground_truth": "15.0-21.6s P4 suspicious_looking/look_right",
+  "v1_alerts": "18.0-24.0s #2 looking (0.97)",
+  "class": "looking"
+ },
+ {
+  "clip": "interaction_S08_0087-0123s",
+  "session": "S08",
+  "start_s": "87.0",
+  "end_s": "123.7",
+  "kind": "event",
+  "ground_truth": "15.0-21.7s P1->P6 communicating/whisper",
+  "v1_alerts": "18.0-22.0s #5 looking (0.97) | 20.0-22.0s #1 interaction (0.93) | 29.0-30.0s #1 phone_cheatsheet (0.93)",
+  "class": "interaction"
+ },
+ {
+  "clip": "interaction_S08_0109-0145s",
+  "session": "S08",
+  "start_s": "109.0",
+  "end_s": "145.2",
+  "kind": "event",
+  "ground_truth": "15.0-21.2s P1->P5 exchange_object/pass_note | 33.6-50.2s P3 using_phone/cheat_sheet/phone_under_table",
+  "v1_alerts": "7.0-8.0s #3 phone_cheatsheet (0.86) | 18.0-22.0s #3 interaction (0.98) | 19.0-23.0s #2 interaction (0.95)",
+  "class": "interaction"
+ },
+ {
+  "clip": "phone_cheatsheet_S08_0127-0172s",
+  "session": "S08",
+  "start_s": "127.6",
+  "end_s": "172.6",
+  "kind": "event",
+  "ground_truth": "-3.6-2.5s P1->P5 exchange_object/pass_note | 15.0-31.6s P3 using_phone/cheat_sheet/phone_under_table",
+  "v1_alerts": "18.0-22.0s #5 phone_cheatsheet (0.97) | 28.0-35.0s #5 phone_cheatsheet (0.96)",
+  "class": "phone_cheatsheet"
+ },
+ {
+  "clip": "normal_S08_0295-0325s",
+  "session": "S08",
+  "start_s": "295",
+  "end_s": "325.0",
+  "kind": "normal",
+  "ground_truth": "none",
+  "v1_alerts": "13.0-16.0s #2 interaction (0.93) | 14.0-28.0s #1 phone_cheatsheet (0.95) | 21.0-22.0s #2 interaction (0.86) | 26.0-29.0s #3 phone_cheatsheet (0.92)",
+  "class": "normal"
+ }
+]

@@ -1,0 +1,37 @@
+run dir: /workspace/runs/tsm_r50_k400_seg8_clips_hr_20260924_134847
+train 1285 clips, val 450 clips, classes ['normal', 'looking', 'interaction', 'phone_cheatsheet']
+TSM-R50 (k400, 318 tensors loaded): 8 segments @ 224px, 80 steps/epoch
+ep   1 | loss 1.283 acc 0.413 (33 clip/s) | val acc 0.498 macroF1 0.269 cheat AUROC 0.792 R 0.091 P 0.875 | F1 0.67 0.39 0.00 0.02  *best*
+ep   2 | loss 0.857 acc 0.659 (70 clip/s) | val acc 0.687 macroF1 0.582 cheat AUROC 0.864 R 0.545 P 0.926 | F1 0.78 0.47 0.66 0.41  *best*
+ep   3 | loss 0.718 acc 0.738 (69 clip/s) | val acc 0.756 macroF1 0.668 cheat AUROC 0.909 R 0.697 P 0.931 | F1 0.83 0.50 0.70 0.64  *best*
+ep   4 | loss 0.616 acc 0.753 (71 clip/s) | val acc 0.753 macroF1 0.690 cheat AUROC 0.908 R 0.736 P 0.909 | F1 0.84 0.61 0.68 0.64  *best*
+ep   5 | loss 0.649 acc 0.763 (70 clip/s) | val acc 0.769 macroF1 0.698 cheat AUROC 0.902 R 0.775 P 0.899 | F1 0.85 0.56 0.70 0.69  *best*
+ep   6 | loss 0.606 acc 0.755 (71 clip/s) | val acc 0.758 macroF1 0.684 cheat AUROC 0.903 R 0.779 P 0.891 | F1 0.84 0.54 0.68 0.67
+ep   7 | loss 0.569 acc 0.768 (71 clip/s) | val acc 0.747 macroF1 0.651 cheat AUROC 0.907 R 0.771 P 0.890 | F1 0.84 0.45 0.68 0.63
+ep   8 | loss 0.534 acc 0.836 (71 clip/s) | val acc 0.760 macroF1 0.660 cheat AUROC 0.914 R 0.732 P 0.918 | F1 0.84 0.42 0.68 0.69
+ep   9 | loss 0.549 acc 0.800 (70 clip/s) | val acc 0.742 macroF1 0.633 cheat AUROC 0.912 R 0.749 P 0.901 | F1 0.84 0.37 0.64 0.69
+ep  10 | loss 0.545 acc 0.804 (70 clip/s) | val acc 0.716 macroF1 0.599 cheat AUROC 0.902 R 0.740 P 0.872 | F1 0.82 0.33 0.61 0.63
+ep  11 | loss 0.528 acc 0.791 (71 clip/s) | val acc 0.733 macroF1 0.613 cheat AUROC 0.909 R 0.745 P 0.882 | F1 0.83 0.30 0.62 0.70
+ep  12 | loss 0.511 acc 0.806 (70 clip/s) | val acc 0.758 macroF1 0.635 cheat AUROC 0.916 R 0.758 P 0.907 | F1 0.84 0.31 0.64 0.74
+ep  13 | loss 0.512 acc 0.823 (70 clip/s) | val acc 0.742 macroF1 0.612 cheat AUROC 0.916 R 0.736 P 0.909 | F1 0.84 0.27 0.63 0.71
+ep  14 | loss 0.494 acc 0.798 (70 clip/s) | val acc 0.751 macroF1 0.624 cheat AUROC 0.923 R 0.732 P 0.929 | F1 0.85 0.31 0.64 0.69
+ep  15 | loss 0.492 acc 0.784 (70 clip/s) | val acc 0.744 macroF1 0.635 cheat AUROC 0.922 R 0.723 P 0.913 | F1 0.84 0.39 0.64 0.67
+ep  16 | loss 0.533 acc 0.796 (70 clip/s) | val acc 0.742 macroF1 0.622 cheat AUROC 0.919 R 0.745 P 0.901 | F1 0.84 0.32 0.63 0.70
+ep  17 | loss 0.475 acc 0.820 (71 clip/s) | val acc 0.740 macroF1 0.627 cheat AUROC 0.919 R 0.740 P 0.900 | F1 0.84 0.35 0.63 0.69
+ep  18 | loss 0.494 acc 0.798 (71 clip/s) | val acc 0.738 macroF1 0.625 cheat AUROC 0.916 R 0.740 P 0.895 | F1 0.83 0.35 0.63 0.69
+ep  19 | loss 0.528 acc 0.825 (70 clip/s) | val acc 0.747 macroF1 0.633 cheat AUROC 0.923 R 0.732 P 0.909 | F1 0.84 0.35 0.64 0.70
+ep  20 | loss 0.461 acc 0.800 (71 clip/s) | val acc 0.753 macroF1 0.638 cheat AUROC 0.927 R 0.732 P 0.918 | F1 0.84 0.35 0.65 0.71
+ep  21 | loss 0.481 acc 0.789 (71 clip/s) | val acc 0.744 macroF1 0.631 cheat AUROC 0.925 R 0.727 P 0.913 | F1 0.84 0.36 0.64 0.69
+ep  22 | loss 0.458 acc 0.760 (70 clip/s) | val acc 0.744 macroF1 0.632 cheat AUROC 0.924 R 0.723 P 0.913 | F1 0.84 0.36 0.64 0.69
+ep  23 | loss 0.423 acc 0.859 (70 clip/s) | val acc 0.740 macroF1 0.626 cheat AUROC 0.922 R 0.719 P 0.912 | F1 0.83 0.36 0.64 0.67
+ep  24 | loss 0.460 acc 0.839 (71 clip/s) | val acc 0.747 macroF1 0.634 cheat AUROC 0.922 R 0.736 P 0.909 | F1 0.84 0.36 0.65 0.69
+ep  25 | loss 0.512 acc 0.756 (70 clip/s) | val acc 0.747 macroF1 0.637 cheat AUROC 0.922 R 0.740 P 0.905 | F1 0.84 0.38 0.65 0.69
+BEST epoch macroF1 0.698  |  3-view: acc 0.762 macroF1 0.695 cheat AUROC 0.902 R 0.758 P 0.897
+classes   : ['normal', 'looking', 'interaction', 'phone_cheatsheet']
+F1        : [0.84, 0.571, 0.697, 0.671]
+recall    : [0.909, 0.714, 0.726, 0.514]
+confusion (rows=true):
+  normal            [199, 3, 17, 0]
+  looking           [0, 10, 4, 0]
+  interaction       [19, 8, 77, 2]
+  phone_cheatsheet  [37, 0, 17, 57]

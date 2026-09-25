@@ -1,0 +1,11 @@
+clips: 1735  incomplete: 0
+train total 1285
+  normal            clips= 686  events= 25  by_kind={'h': 90, 'n': 596}
+  looking           clips= 121  events= 44  by_kind={'e': 121}
+  interaction       clips= 238  events= 49  by_kind={'e': 119, 'r': 119}
+  phone_cheatsheet  clips= 240  events= 26  by_kind={'e': 240}
+val total 450
+  normal            clips= 219  events=  7  by_kind={'h': 15, 'n': 204}
+  looking           clips=  14  events=  6  by_kind={'e': 14}
+  interaction       clips= 106  events= 17  by_kind={'e': 53, 'r': 53}
+  phone_cheatsheet  clips= 111  events= 12  by_kind={'e': 111}

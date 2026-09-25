@@ -1,0 +1,597 @@
+[
+ {
+  "track": 2,
+  "start": 3.0,
+  "end": 6.0,
+  "peak": 0.9517104625701904,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 5,
+  "start": 26.0,
+  "end": 39.0,
+  "peak": 0.9686985015869141,
+  "type": "looking"
+ },
+ {
+  "track": 4,
+  "start": 52.0,
+  "end": 64.0,
+  "peak": 0.9263668060302734,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 3,
+  "start": 56.0,
+  "end": 64.0,
+  "peak": 0.8261062502861023,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 2,
+  "start": 60.0,
+  "end": 61.0,
+  "peak": 0.6075273752212524,
+  "type": "interaction"
+ },
+ {
+  "track": 5,
+  "start": 69.0,
+  "end": 81.0,
+  "peak": 0.8751512765884399,
+  "type": "looking"
+ },
+ {
+  "track": 3,
+  "start": 79.0,
+  "end": 82.0,
+  "peak": 0.8169452548027039,
+  "type": "looking"
+ },
+ {
+  "track": 1,
+  "start": 81.0,
+  "end": 85.0,
+  "peak": 0.7048144340515137,
+  "type": "interaction"
+ },
+ {
+  "track": 1,
+  "start": 89.0,
+  "end": 91.0,
+  "peak": 0.7798494100570679,
+  "type": "interaction"
+ },
+ {
+  "track": 5,
+  "start": 93.0,
+  "end": 101.0,
+  "peak": 0.7771434187889099,
+  "type": "interaction"
+ },
+ {
+  "track": 4,
+  "start": 105.0,
+  "end": 110.0,
+  "peak": 0.9693339467048645,
+  "type": "looking"
+ },
+ {
+  "track": 3,
+  "start": 106.0,
+  "end": 110.0,
+  "peak": 0.9260010719299316,
+  "type": "looking"
+ },
+ {
+  "track": 3,
+  "start": 114.0,
+  "end": 118.0,
+  "peak": 0.8837857246398926,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 5,
+  "start": 116.0,
+  "end": 154.0,
+  "peak": 0.7796587944030762,
+  "type": "interaction"
+ },
+ {
+  "track": 3,
+  "start": 126.0,
+  "end": 132.0,
+  "peak": 0.9784749150276184,
+  "type": "interaction"
+ },
+ {
+  "track": 2,
+  "start": 127.0,
+  "end": 133.0,
+  "peak": 0.9541089534759521,
+  "type": "interaction"
+ },
+ {
+  "track": 4,
+  "start": 128.0,
+  "end": 130.0,
+  "peak": 0.7746814489364624,
+  "type": "interaction"
+ },
+ {
+  "track": 3,
+  "start": 143.0,
+  "end": 144.0,
+  "peak": 0.6161781549453735,
+  "type": "looking"
+ },
+ {
+  "track": 10,
+  "start": 145.0,
+  "end": 152.0,
+  "peak": 0.9684634804725647,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 10,
+  "start": 155.0,
+  "end": 165.0,
+  "peak": 0.9680166840553284,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 5,
+  "start": 167.0,
+  "end": 182.0,
+  "peak": 0.9702999591827393,
+  "type": "interaction"
+ },
+ {
+  "track": 1,
+  "start": 175.0,
+  "end": 181.0,
+  "peak": 0.9524840116500854,
+  "type": "interaction"
+ },
+ {
+  "track": 10,
+  "start": 177.0,
+  "end": 179.0,
+  "peak": 0.8484858274459839,
+  "type": "interaction"
+ },
+ {
+  "track": 2,
+  "start": 200.0,
+  "end": 202.0,
+  "peak": 0.7642902135848999,
+  "type": "looking"
+ },
+ {
+  "track": 5,
+  "start": 233.0,
+  "end": 243.0,
+  "peak": 0.8445435166358948,
+  "type": "interaction"
+ },
+ {
+  "track": 2,
+  "start": 235.0,
+  "end": 244.0,
+  "peak": 0.9806784987449646,
+  "type": "interaction"
+ },
+ {
+  "track": 10,
+  "start": 236.0,
+  "end": 244.0,
+  "peak": 0.8884927034378052,
+  "type": "interaction"
+ },
+ {
+  "track": 3,
+  "start": 247.0,
+  "end": 250.0,
+  "peak": 0.6966701745986938,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 5,
+  "start": 252.0,
+  "end": 264.0,
+  "peak": 0.8364514708518982,
+  "type": "interaction"
+ },
+ {
+  "track": 2,
+  "start": 261.0,
+  "end": 263.0,
+  "peak": 0.6710000038146973,
+  "type": "interaction"
+ },
+ {
+  "track": 5,
+  "start": 269.0,
+  "end": 271.0,
+  "peak": 0.7241494059562683,
+  "type": "interaction"
+ },
+ {
+  "track": 3,
+  "start": 270.0,
+  "end": 272.0,
+  "peak": 0.7826220393180847,
+  "type": "looking"
+ },
+ {
+  "track": 2,
+  "start": 277.0,
+  "end": 284.0,
+  "peak": 0.9338610768318176,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 4,
+  "start": 284.0,
+  "end": 289.0,
+  "peak": 0.9443447589874268,
+  "type": "interaction"
+ },
+ {
+  "track": 10,
+  "start": 284.0,
+  "end": 290.0,
+  "peak": 0.9574186205863953,
+  "type": "interaction"
+ },
+ {
+  "track": 2,
+  "start": 292.0,
+  "end": 293.0,
+  "peak": 0.6577936410903931,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 3,
+  "start": 307.0,
+  "end": 318.0,
+  "peak": 0.9216032028198242,
+  "type": "interaction"
+ },
+ {
+  "track": 1,
+  "start": 307.0,
+  "end": 325.0,
+  "peak": 0.946807861328125,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 2,
+  "start": 318.0,
+  "end": 325.0,
+  "peak": 0.928512692451477,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 10,
+  "start": 321.0,
+  "end": 321.0,
+  "peak": 0.658808708190918,
+  "type": "interaction"
+ },
+ {
+  "track": 3,
+  "start": 349.0,
+  "end": 351.0,
+  "peak": 0.6920106410980225,
+  "type": "looking"
+ },
+ {
+  "track": 5,
+  "start": 351.0,
+  "end": 352.0,
+  "peak": 0.6778053045272827,
+  "type": "looking"
+ },
+ {
+  "track": 2,
+  "start": 353.0,
+  "end": 356.0,
+  "peak": 0.7297899723052979,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 3,
+  "start": 360.0,
+  "end": 361.0,
+  "peak": 0.6203125715255737,
+  "type": "interaction"
+ },
+ {
+  "track": 4,
+  "start": 360.0,
+  "end": 361.0,
+  "peak": 0.6090384721755981,
+  "type": "interaction"
+ },
+ {
+  "track": 10,
+  "start": 361.0,
+  "end": 364.0,
+  "peak": 0.7852956652641296,
+  "type": "interaction"
+ },
+ {
+  "track": 5,
+  "start": 375.0,
+  "end": 427.0,
+  "peak": 0.9841220378875732,
+  "type": "interaction"
+ },
+ {
+  "track": 4,
+  "start": 378.0,
+  "end": 383.0,
+  "peak": 0.9740079045295715,
+  "type": "interaction"
+ },
+ {
+  "track": 3,
+  "start": 379.0,
+  "end": 381.0,
+  "peak": 0.9475549459457397,
+  "type": "interaction"
+ },
+ {
+  "track": 2,
+  "start": 416.0,
+  "end": 419.0,
+  "peak": 0.7275029420852661,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 1,
+  "start": 438.0,
+  "end": 441.0,
+  "peak": 0.8699411749839783,
+  "type": "interaction"
+ },
+ {
+  "track": 3,
+  "start": 438.0,
+  "end": 442.0,
+  "peak": 0.9280846118927002,
+  "type": "looking"
+ },
+ {
+  "track": 10,
+  "start": 439.0,
+  "end": 442.0,
+  "peak": 0.8156707286834717,
+  "type": "interaction"
+ },
+ {
+  "track": 10,
+  "start": 447.0,
+  "end": 448.0,
+  "peak": 0.6154334545135498,
+  "type": "interaction"
+ },
+ {
+  "track": 2,
+  "start": 465.0,
+  "end": 469.0,
+  "peak": 0.8000906705856323,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 4,
+  "start": 469.0,
+  "end": 473.0,
+  "peak": 0.9325956106185913,
+  "type": "interaction"
+ },
+ {
+  "track": 1,
+  "start": 470.0,
+  "end": 471.0,
+  "peak": 0.6178127527236938,
+  "type": "interaction"
+ },
+ {
+  "track": 3,
+  "start": 471.0,
+  "end": 474.0,
+  "peak": 0.8693159818649292,
+  "type": "interaction"
+ },
+ {
+  "track": 3,
+  "start": 486.0,
+  "end": 488.0,
+  "peak": 0.7715414762496948,
+  "type": "looking"
+ },
+ {
+  "track": 5,
+  "start": 487.0,
+  "end": 489.0,
+  "peak": 0.7472783327102661,
+  "type": "looking"
+ },
+ {
+  "track": 2,
+  "start": 487.0,
+  "end": 493.0,
+  "peak": 0.9545043110847473,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 5,
+  "start": 496.0,
+  "end": 506.0,
+  "peak": 0.9568880796432495,
+  "type": "interaction"
+ },
+ {
+  "track": 2,
+  "start": 499.0,
+  "end": 506.0,
+  "peak": 0.959750235080719,
+  "type": "interaction"
+ },
+ {
+  "track": 1,
+  "start": 502.0,
+  "end": 504.0,
+  "peak": 0.7505661249160767,
+  "type": "interaction"
+ },
+ {
+  "track": 3,
+  "start": 504.0,
+  "end": 504.0,
+  "peak": 0.6286177635192871,
+  "type": "looking"
+ },
+ {
+  "track": 10,
+  "start": 513.0,
+  "end": 517.0,
+  "peak": 0.8959155082702637,
+  "type": "looking"
+ },
+ {
+  "track": 1,
+  "start": 524.0,
+  "end": 526.0,
+  "peak": 0.669264554977417,
+  "type": "interaction"
+ },
+ {
+  "track": 5,
+  "start": 538.0,
+  "end": 541.0,
+  "peak": 0.7738971710205078,
+  "type": "interaction"
+ },
+ {
+  "track": 10,
+  "start": 542.0,
+  "end": 547.0,
+  "peak": 0.8622979521751404,
+  "type": "interaction"
+ },
+ {
+  "track": 2,
+  "start": 545.0,
+  "end": 549.0,
+  "peak": 0.8287169337272644,
+  "type": "looking"
+ },
+ {
+  "track": 2,
+  "start": 576.0,
+  "end": 582.0,
+  "peak": 0.9581589102745056,
+  "type": "interaction"
+ },
+ {
+  "track": 4,
+  "start": 577.0,
+  "end": 580.0,
+  "peak": 0.8589444160461426,
+  "type": "looking"
+ },
+ {
+  "track": 1,
+  "start": 577.0,
+  "end": 581.0,
+  "peak": 0.8051151633262634,
+  "type": "interaction"
+ },
+ {
+  "track": 3,
+  "start": 579.0,
+  "end": 583.0,
+  "peak": 0.9530621767044067,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 5,
+  "start": 580.0,
+  "end": 584.0,
+  "peak": 0.8736847639083862,
+  "type": "looking"
+ },
+ {
+  "track": 1,
+  "start": 600.0,
+  "end": 605.0,
+  "peak": 0.9395006895065308,
+  "type": "looking"
+ },
+ {
+  "track": 5,
+  "start": 604.0,
+  "end": 606.0,
+  "peak": 0.6288802623748779,
+  "type": "looking"
+ },
+ {
+  "track": 10,
+  "start": 605.0,
+  "end": 606.0,
+  "peak": 0.678452730178833,
+  "type": "interaction"
+ },
+ {
+  "track": 3,
+  "start": 615.0,
+  "end": 628.0,
+  "peak": 0.9737499952316284,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 47,
+  "start": 626.0,
+  "end": 639.0,
+  "peak": 0.8873990178108215,
+  "type": "looking"
+ },
+ {
+  "track": 10,
+  "start": 635.0,
+  "end": 636.0,
+  "peak": 0.735175609588623,
+  "type": "looking"
+ },
+ {
+  "track": 4,
+  "start": 639.0,
+  "end": 647.0,
+  "peak": 0.6485600471496582,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 4,
+  "start": 655.0,
+  "end": 656.0,
+  "peak": 0.6264245510101318,
+  "type": "interaction"
+ },
+ {
+  "track": 3,
+  "start": 656.0,
+  "end": 656.0,
+  "peak": 0.6643028259277344,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 47,
+  "start": 656.0,
+  "end": 656.0,
+  "peak": 0.6253523826599121,
+  "type": "looking"
+ }
+]

@@ -1,0 +1,11 @@
+class,clip,session,start_s,end_s,ground_truth
+normal,normal_S07_0545-0575s,S07,545,575.0,none
+normal,normal_S08_0295-0325s,S08,295,325.0,none
+looking,looking_S07_0020-0054s,S07,20.3,54.9,15.0-19.6s P6 suspicious_looking/look_left
+looking,looking_S08_0009-0045s,S08,9.0,45.7,15.0-21.6s P4 suspicious_looking/look_right
+interaction,interaction_S07_0106-0142s,S07,106.5,142.8,15.0-21.3s P1->P2 communicating/whisper
+interaction,interaction_S07_0299-0335s,S07,299.3,335.1,15.0-20.8s P2->P4 exchange_object/return_object
+interaction,interaction_S08_0087-0123s,S08,87.0,123.7,15.0-21.7s P1->P6 communicating/whisper
+interaction,interaction_S08_0109-0145s,S08,109.0,145.2,15.0-21.2s P1->P5 exchange_object/pass_note | 33.6-50.2s P3 using_phone/cheat_sheet/phone_under_table
+phone_cheatsheet,phone_cheatsheet_S07_0054-0099s,S07,54.6,99.6,15.0-30.6s P4 using_phone/cheat_sheet/phone_on_desk | 41.7-45.6s P5 hard_negative/raise_hand
+phone_cheatsheet,phone_cheatsheet_S08_0127-0172s,S08,127.6,172.6,-3.6-2.5s P1->P5 exchange_object/pass_note | 15.0-31.6s P3 using_phone/cheat_sheet/phone_under_table

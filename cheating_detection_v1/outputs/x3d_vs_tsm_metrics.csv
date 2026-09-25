@@ -1,0 +1,18 @@
+﻿"Metric (450 val clips S07+S08, 3-view test)",X3D,TSM,X3D normal/abnormal (v2)
+Accuracy (4 classes),0.829,0.762,-
+Macro-F1 (4 classes),0.748,0.695,-
+Cheating AUROC,0.946,0.902,0.949
+Cheating recall,0.823,0.758,0.848
+Cheating precision,0.936,0.897,0.912
+F1 looking,0.512,0.571,-
+F1 interaction,0.763,0.697,-
+F1 phone_cheatsheet,0.832,0.671,-
+Normal/abnormal accuracy,0.880,0.831,0.880
+Normal/abnormal macro-F1,0.880,0.831,0.880
+F1 normal,0.884,0.840,0.881
+Precision normal,0.834,0.780,0.851
+Recall normal,0.941,0.909,0.913
+F1 abnormal,0.876,0.822,0.879
+Precision abnormal,0.936,0.897,0.912
+Recall abnormal,0.823,0.758,0.848
+Inference cost per clip (GFLOPs),~25,~33,~25

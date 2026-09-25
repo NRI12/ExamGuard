@@ -1,0 +1,41 @@
+{
+ "windows": 8766,
+ "box_match_iou_median": 0.7348636790651727,
+ "window_macro_f1": 0.5255156049300902,
+ "window_f1": {
+  "normal": 0.954,
+  "looking": 0.238,
+  "interaction": 0.4,
+  "phone_cheatsheet": 0.51
+ },
+ "window_recall": {
+  "normal": 0.926,
+  "looking": 0.576,
+  "interaction": 0.65,
+  "phone_cheatsheet": 0.626
+ },
+ "window_support": {
+  "normal": 8292,
+  "looking": 33,
+  "interaction": 243,
+  "phone_cheatsheet": 198
+ },
+ "cheat_auroc": 0.921128417202489,
+ "alert_precision": 0.34904714142427284,
+ "alert_recall": 0.7341772151898734,
+ "event_recall": {
+  "looking": "6/6",
+  "phone_cheatsheet": "11/12",
+  "interaction": "33/34"
+ },
+ "event_recall_total": 0.9615384615384616,
+ "false_alarm_episodes": 101,
+ "false_alarms_per_person_hour": 43.639820255789836,
+ "thr_on": 0.6,
+ "thr_off": 0.45
+}
+confusion (rows=true):
+  normal            [7680, 86, 364, 162]
+  looking           [4, 19, 10, 0]
+  interaction       [62, 21, 158, 2]
+  phone_cheatsheet  [58, 1, 15, 124]
