@@ -1,0 +1,44 @@
+=== 2. smoke tests
+Downloading: "https://dl.fbaipublicfiles.com/pytorchvideo/model_zoo/kinetics/X3D_S.pyth" to /root/.cache/torch/hub/checkpoints/X3D_S.pyth
+run dir: /workspace/cheating_detection_v3/outputs/smoke/runs/cheating_detection_v3_flow_20260925_034412
+train 1285 clips, val 450 clips, classes ['normal', 'looking', 'interaction', 'phone_cheatsheet']
+arch flow: 16 frames every 0.20s | rgb None @ None | flow x3d_s @ 160
+ep   1 | loss 1.410 acc 0.203 | val acc 0.518 macroF1 0.283 cheat AUROC 0.650 R 0.524 P 0.747  *best*
+best epoch macroF1 0.283 | 1-view test:
+acc 0.518  macroF1 0.283  cheat AUROC 0.650  recall 0.524  precision 0.747
+F1    : {'normal': 0.702, 'looking': 0.0, 'interaction': 0.0, 'phone_cheatsheet': 0.431}
+confusion (rows = true):
+  normal            [178, 8, 1, 32]
+  looking           [9, 0, 0, 5]
+  interaction       [48, 6, 0, 52]
+  phone_cheatsheet  [53, 3, 0, 55]
+checkpoint: /workspace/cheating_detection_v3/outputs/smoke/runs/cheating_detection_v3_flow_20260925_034412/best.pt  (copy it to /workspace/cheating_detection_v3/weights/flow_x3d_s_best.pt to use it by default)
+run dir: /workspace/cheating_detection_v3/outputs/smoke/runs/cheating_detection_v3_fusion_20260925_034454
+train 1285 clips, val 450 clips, classes ['normal', 'looking', 'interaction', 'phone_cheatsheet']
+arch fusion: 16 frames every 0.20s | rgb x3d_l @ 312 | flow x3d_s @ 160
+epoch 0 = late fusion, 1-view:
+acc 0.818  macroF1 0.738  cheat AUROC 0.941  recall 0.797  precision 0.929
+F1    : {'normal': 0.87, 'looking': 0.513, 'interaction': 0.746, 'phone_cheatsheet': 0.822}
+confusion (rows = true):
+  normal            [205, 2, 7, 5]
+  looking           [0, 10, 4, 0]
+  interaction       [21, 13, 72, 0]
+  phone_cheatsheet  [26, 0, 4, 81]
+ep   1 | loss 0.543 acc 1.000 | val acc 0.807 macroF1 0.716 cheat AUROC 0.941 R 0.797 P 0.925  *best*
+best epoch macroF1 0.716 | 1-view test:
+acc 0.807  macroF1 0.716  cheat AUROC 0.941  recall 0.797  precision 0.925
+F1    : {'normal': 0.868, 'looking': 0.455, 'interaction': 0.723, 'phone_cheatsheet': 0.818}
+confusion (rows = true):
+  normal            [204, 4, 6, 5]
+  looking           [0, 10, 4, 0]
+  interaction       [21, 16, 68, 1]
+  phone_cheatsheet  [26, 0, 4, 81]
+checkpoint: /workspace/cheating_detection_v3/outputs/smoke/runs/cheating_detection_v3_fusion_20260925_034454/best.pt  (copy it to /workspace/cheating_detection_v3/weights/fusion_best.pt to use it by default)
+Creating new Ultralytics Settings v0.0.8 file ✅ 
+View Ultralytics Settings with 'yolo settings' or at '/root/.config/Ultralytics/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/usage/settings.
+frames: 201fr [00:05, 37.37fr/s, alerts=0, events=1, tracks=6]                         
+frames: 201fr [00:05, 35.51fr/s, alerts=0, events=1, tracks=6]
+201 frames in 5.7s (35.4 fps), 1 events
+  track #2       3.0s -     5.0s  phone_cheatsheet  peak 0.88
+SMOKE_OK

@@ -1,0 +1,10 @@
+=== 3. RGB baseline (v1 model) on these clips
+rgb_x3d_l_best.pt (rgb):
+acc 0.829  macroF1 0.748  cheat AUROC 0.946  recall 0.823  precision 0.936
+F1    : {'normal': 0.884, 'looking': 0.512, 'interaction': 0.763, 'phone_cheatsheet': 0.832}
+confusion (rows = true):
+  normal            [206, 2, 7, 4]
+  looking           [0, 11, 3, 0]
+  interaction       [17, 15, 74, 0]
+  phone_cheatsheet  [24, 1, 4, 82]
+saved /workspace/cheating_detection_v3/outputs/eval/rgb_x3d_l_best_val_3view.json

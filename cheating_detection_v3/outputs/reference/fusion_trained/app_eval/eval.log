@@ -1,0 +1,61 @@
+=== 6. full S07 + S08 videos
+{
+ "windows": 8766,
+ "box_match_iou_median": 0.7348636790651727,
+ "window_macro_f1": 0.5347095493138023,
+ "window_f1": {
+  "normal": 0.962,
+  "looking": 0.232,
+  "interaction": 0.433,
+  "phone_cheatsheet": 0.512
+ },
+ "window_recall": {
+  "normal": 0.944,
+  "looking": 0.485,
+  "interaction": 0.556,
+  "phone_cheatsheet": 0.646
+ },
+ "window_support": {
+  "normal": 8292,
+  "looking": 33,
+  "interaction": 243,
+  "phone_cheatsheet": 198
+ },
+ "cheat_auroc": 0.9195622948050177,
+ "alert_precision": 0.5994550408719346,
+ "alert_recall": 0.4641350210970464,
+ "event_recall": {
+  "looking": "3/6",
+  "phone_cheatsheet": "8/12",
+  "interaction": "27/34"
+ },
+ "event_recall_total": 0.7307692307692307,
+ "false_alarm_episodes": 25,
+ "false_alarms_per_person_hour": 10.801935706878673,
+ "thr_on": 0.85,
+ "thr_off": 0.7,
+ "min_windows": 2
+}
+confusion (rows = true):
+  normal            [7828, 66, 229, 169]
+  looking           [6, 16, 11, 0]
+  interaction       [81, 22, 135, 5]
+  phone_cheatsheet  [63, 1, 6, 128]
+smooth thr_on thr_off min_win    events recall false_alarms FA/person-h
+     8   0.95     0.8       1    4/52     0.08            0         0.0
+     5   0.95     0.8       1    7/52     0.13            3         1.3
+     5   0.85     0.7       5   16/52     0.31            5         2.2
+     5    0.9    0.75       1   24/52     0.46            8         3.5
+     3    0.9    0.75       3   26/52     0.50           10         4.3
+     5   0.85     0.7       1   31/52     0.60           12         5.2
+     3    0.9    0.75       2   33/52     0.63           13         5.6
+     3    0.9    0.75       1   34/52     0.65           14         6.0
+     3    0.8    0.65       3   38/52     0.73           24        10.4
+     5    0.7    0.55       3   39/52     0.75           26        11.2
+     3    0.6    0.45       5   40/52     0.77           27        11.7
+     3    0.8    0.65       2   41/52     0.79           28        12.1
+     5    0.6    0.45       3   43/52     0.83           38        16.4
+     3    0.7    0.55       2   45/52     0.87           49        21.2
+     3    0.6    0.45       3   46/52     0.88           55        23.8
+     3    0.6    0.45       2   48/52     0.92           68        29.4
+V3_DONE

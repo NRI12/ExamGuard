@@ -1,0 +1,31 @@
+=== 5. fusion
+run dir: /workspace/cheating_detection_v3/outputs/runs/cheating_detection_v3_fusion_20260925_035424
+train 1285 clips, val 450 clips, classes ['normal', 'looking', 'interaction', 'phone_cheatsheet']
+arch fusion: 16 frames every 0.20s | rgb x3d_l @ 312 | flow x3d_s @ 160
+epoch 0 = late fusion, 3-view:
+acc 0.831  macroF1 0.765  cheat AUROC 0.948  recall 0.797  precision 0.953
+F1    : {'normal': 0.882, 'looking': 0.595, 'interaction': 0.784, 'phone_cheatsheet': 0.798}
+confusion (rows = true):
+  normal            [210, 1, 6, 2]
+  looking           [0, 11, 3, 0]
+  interaction       [17, 10, 76, 3]
+  phone_cheatsheet  [30, 1, 3, 77]
+ep   1 | loss 0.465 acc 0.885 | val acc 0.813 macroF1 0.723 cheat AUROC 0.947 R 0.792 P 0.943  *best*
+ep   2 | loss 0.460 acc 0.841 | val acc 0.822 macroF1 0.728 cheat AUROC 0.950 R 0.797 P 0.944  *best*
+ep   3 | loss 0.474 acc 0.819 | val acc 0.818 macroF1 0.714 cheat AUROC 0.946 R 0.801 P 0.939
+ep   4 | loss 0.500 acc 0.784 | val acc 0.820 macroF1 0.737 cheat AUROC 0.943 R 0.788 P 0.948  *best*
+ep   5 | loss 0.457 acc 0.852 | val acc 0.818 macroF1 0.715 cheat AUROC 0.946 R 0.779 P 0.952
+ep   6 | loss 0.474 acc 0.823 | val acc 0.809 macroF1 0.704 cheat AUROC 0.947 R 0.775 P 0.957
+ep   7 | loss 0.457 acc 0.851 | val acc 0.811 macroF1 0.707 cheat AUROC 0.946 R 0.779 P 0.952
+ep   8 | loss 0.457 acc 0.842 | val acc 0.800 macroF1 0.684 cheat AUROC 0.946 R 0.771 P 0.952
+ep   9 | loss 0.453 acc 0.808 | val acc 0.802 macroF1 0.688 cheat AUROC 0.947 R 0.758 P 0.951
+ep  10 | loss 0.497 acc 0.797 | val acc 0.800 macroF1 0.687 cheat AUROC 0.946 R 0.758 P 0.951
+best epoch macroF1 0.737 | 3-view test:
+acc 0.822  macroF1 0.733  cheat AUROC 0.945  recall 0.797  precision 0.948
+F1    : {'normal': 0.88, 'looking': 0.476, 'interaction': 0.747, 'phone_cheatsheet': 0.829}
+confusion (rows = true):
+  normal            [209, 2, 6, 2]
+  looking           [1, 10, 3, 0]
+  interaction       [20, 15, 71, 0]
+  phone_cheatsheet  [26, 1, 4, 80]
+checkpoint: /workspace/cheating_detection_v3/outputs/runs/cheating_detection_v3_fusion_20260925_035424/best.pt  (copy it to /workspace/cheating_detection_v3/weights/fusion_best.pt to use it by default)

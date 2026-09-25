@@ -1,0 +1,68 @@
+late_fusion.pt (fusion):
+acc 0.831  macroF1 0.765  cheat AUROC 0.948  recall 0.797  precision 0.953
+F1    : {'normal': 0.882, 'looking': 0.595, 'interaction': 0.784, 'phone_cheatsheet': 0.798}
+confusion (rows = true):
+  normal            [210, 1, 6, 2]
+  looking           [0, 11, 3, 0]
+  interaction       [17, 10, 76, 3]
+  phone_cheatsheet  [30, 1, 3, 77]
+saved /workspace/cheating_detection_v3/outputs/eval/late_fusion_val_3view.json
+{
+ "windows": 8766,
+ "box_match_iou_median": 0.7348636790651727,
+ "window_macro_f1": 0.5756967368067605,
+ "window_f1": {
+  "normal": 0.97,
+  "looking": 0.356,
+  "interaction": 0.472,
+  "phone_cheatsheet": 0.505
+ },
+ "window_recall": {
+  "normal": 0.961,
+  "looking": 0.485,
+  "interaction": 0.514,
+  "phone_cheatsheet": 0.616
+ },
+ "window_support": {
+  "normal": 8292,
+  "looking": 33,
+  "interaction": 243,
+  "phone_cheatsheet": 198
+ },
+ "cheat_auroc": 0.9287519260086994,
+ "alert_precision": 0.7156862745098039,
+ "alert_recall": 0.3080168776371308,
+ "event_recall": {
+  "looking": "2/6",
+  "phone_cheatsheet": "8/12",
+  "interaction": "18/34"
+ },
+ "event_recall_total": 0.5384615384615384,
+ "false_alarm_episodes": 8,
+ "false_alarms_per_person_hour": 3.456619426201175,
+ "thr_on": 0.85,
+ "thr_off": 0.7,
+ "min_windows": 2
+}
+confusion (rows = true):
+  normal            [7971, 25, 143, 153]
+  looking           [7, 16, 10, 0]
+  interaction       [93, 15, 125, 10]
+  phone_cheatsheet  [66, 1, 9, 122]
+smooth thr_on thr_off min_win    events recall false_alarms FA/person-h
+     3   0.95     0.8       1    1/52     0.02            0         0.0
+     8   0.85     0.7       1    7/52     0.13            2         0.9
+     3    0.9    0.75       3   14/52     0.27            3         1.3
+     5   0.85     0.7       1   18/52     0.35            4         1.7
+     8    0.7    0.55       5   22/52     0.42            6         2.6
+     8    0.7    0.55       1   26/52     0.50            7         3.0
+     3   0.85     0.7       1   28/52     0.54            8         3.5
+     3    0.8    0.65       3   32/52     0.62           14         6.0
+     3    0.8    0.65       1   35/52     0.67           17         7.3
+     8    0.6    0.45       5   36/52     0.69           19         8.2
+     5    0.7    0.55       3   37/52     0.71           21         9.1
+     5    0.7    0.55       1   39/52     0.75           22         9.5
+     3    0.7    0.55       3   41/52     0.79           31        13.4
+     5    0.6    0.45       1   43/52     0.83           37        16.0
+     3    0.6    0.45       3   47/52     0.90           56        24.2
+LATE_DONE

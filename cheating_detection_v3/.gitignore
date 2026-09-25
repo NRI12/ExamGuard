@@ -1,0 +1,13 @@
+# large or generated data (download / prepare recreate them)
+data/raw/
+data/videos/
+data/processed/
+# generated results (outputs/reference is kept)
+outputs/runs/
+outputs/eval/
+outputs/app_eval/
+__pycache__/
+*.egg-info/
+.venv/
+*.part
+yolo11*.pt

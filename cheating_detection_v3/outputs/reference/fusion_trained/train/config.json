@@ -1,0 +1,87 @@
+{
+ "project": "cheating_detection_v3",
+ "paths": {
+  "raw_data": "/workspace/cheating_detection_v3/data/raw/DOAN1/annotations",
+  "videos": "/workspace/cheating_detection_v3/data/videos",
+  "clips": "/workspace/cheating_detection_v3/data/processed/clips_hr",
+  "outputs": "/workspace/cheating_detection_v3/outputs",
+  "flow": "/workspace/cheating_detection_v3/data/processed/flow",
+  "weights": "/workspace/cheating_detection_v3/weights/fusion_best.pt",
+  "rgb_init": "/workspace/cheating_detection_v3/weights/rgb_x3d_l_best.pt",
+  "flow_init": "/workspace/cheating_detection_v3/weights/flow_x3d_s_best.pt"
+ },
+ "data": {
+  "source_url": "<DOAN1_DATASET_URL>",
+  "classes": [
+   "normal",
+   "looking",
+   "interaction",
+   "phone_cheatsheet"
+  ],
+  "label_map": {
+   "hard_negative": 0,
+   "suspicious_looking": 1,
+   "communicating": 2,
+   "exchange_object": 2,
+   "using_phone/cheat_sheet": 3
+  },
+  "val_sessions": [
+   "S07",
+   "S08"
+  ],
+  "fps": 25,
+  "clip_len": 100,
+  "clip_size": 356,
+  "event_stride": 40,
+  "crop_pad": 0.15,
+  "normal_margin": 50,
+  "normal_per_person_min": 1.5,
+  "flow_compute_size": 256,
+  "seed": 0
+ },
+ "model": {
+  "arch": "fusion",
+  "rgb_name": "x3d_l",
+  "flow_name": "x3d_s",
+  "flow_frames": 16,
+  "flow_size": 160,
+  "stride": 5,
+  "dropout": 0.5
+ },
+ "train": {
+  "epochs": 10,
+  "warmup": 1.0,
+  "batch_size": 10,
+  "lr": 0.001,
+  "backbone_lr_mult": 0.02,
+  "weight_decay": 0.05,
+  "label_smoothing": 0.1,
+  "mixup": 0.2,
+  "mixup_prob": 0.5,
+  "ema": 0.99,
+  "hard_neg_boost": 3.0,
+  "drop_related": false,
+  "workers": 11,
+  "test_views": 3,
+  "max_steps": 0,
+  "seed": 0
+ },
+ "app": {
+  "detector": "yolo11m.pt",
+  "det_conf": 0.3,
+  "det_imgsz": 640,
+  "infer_every": 1.0,
+  "smooth": 3,
+  "thr_on": 0.85,
+  "thr_off": 0.7,
+  "min_windows": 2,
+  "min_coverage": 0.75,
+  "box_map": {
+   "dx1": -0.101,
+   "dx2": 0.094,
+   "dy1": -0.131,
+   "h": 1.021
+  }
+ },
+ "root": "/workspace/cheating_detection_v3"
+}

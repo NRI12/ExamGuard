@@ -1,0 +1,274 @@
+[
+ {
+  "track": 3,
+  "start": 3.0,
+  "end": 6.0,
+  "peak": 0.9201948046684265,
+  "windows": 4,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 4,
+  "start": 39.0,
+  "end": 41.0,
+  "peak": 0.9262248873710632,
+  "windows": 3,
+  "type": "looking"
+ },
+ {
+  "track": 1,
+  "start": 72.0,
+  "end": 74.0,
+  "peak": 0.8735664486885071,
+  "windows": 3,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 3,
+  "start": 73.0,
+  "end": 87.0,
+  "peak": 0.9699484705924988,
+  "windows": 15,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 6,
+  "start": 111.0,
+  "end": 112.0,
+  "peak": 0.8731211423873901,
+  "windows": 2,
+  "type": "interaction"
+ },
+ {
+  "track": 6,
+  "start": 125.0,
+  "end": 130.0,
+  "peak": 0.9649217128753662,
+  "windows": 6,
+  "type": "interaction"
+ },
+ {
+  "track": 26,
+  "start": 128.0,
+  "end": 131.0,
+  "peak": 0.9278286099433899,
+  "windows": 4,
+  "type": "interaction"
+ },
+ {
+  "track": 4,
+  "start": 247.0,
+  "end": 260.0,
+  "peak": 0.9662434458732605,
+  "windows": 14,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 2,
+  "start": 293.0,
+  "end": 300.0,
+  "peak": 0.9363929033279419,
+  "windows": 8,
+  "type": "interaction"
+ },
+ {
+  "track": 1,
+  "start": 295.0,
+  "end": 305.0,
+  "peak": 0.9663187861442566,
+  "windows": 11,
+  "type": "interaction"
+ },
+ {
+  "track": 3,
+  "start": 318.0,
+  "end": 322.0,
+  "peak": 0.9630517959594727,
+  "windows": 5,
+  "type": "interaction"
+ },
+ {
+  "track": 6,
+  "start": 319.0,
+  "end": 320.0,
+  "peak": 0.8803316354751587,
+  "windows": 2,
+  "type": "interaction"
+ },
+ {
+  "track": 6,
+  "start": 345.0,
+  "end": 347.0,
+  "peak": 0.8711755275726318,
+  "windows": 3,
+  "type": "interaction"
+ },
+ {
+  "track": 6,
+  "start": 352.0,
+  "end": 358.0,
+  "peak": 0.9531096816062927,
+  "windows": 7,
+  "type": "interaction"
+ },
+ {
+  "track": 3,
+  "start": 353.0,
+  "end": 356.0,
+  "peak": 0.9303088188171387,
+  "windows": 4,
+  "type": "interaction"
+ },
+ {
+  "track": 1,
+  "start": 374.0,
+  "end": 376.0,
+  "peak": 0.9430429339408875,
+  "windows": 3,
+  "type": "interaction"
+ },
+ {
+  "track": 6,
+  "start": 374.0,
+  "end": 381.0,
+  "peak": 0.9581453204154968,
+  "windows": 8,
+  "type": "interaction"
+ },
+ {
+  "track": 26,
+  "start": 375.0,
+  "end": 377.0,
+  "peak": 0.958260715007782,
+  "windows": 3,
+  "type": "interaction"
+ },
+ {
+  "track": 1,
+  "start": 402.0,
+  "end": 407.0,
+  "peak": 0.9552691578865051,
+  "windows": 6,
+  "type": "interaction"
+ },
+ {
+  "track": 108,
+  "start": 431.0,
+  "end": 442.0,
+  "peak": 0.9498633742332458,
+  "windows": 9,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 26,
+  "start": 433.0,
+  "end": 439.0,
+  "peak": 0.936058521270752,
+  "windows": 4,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 4,
+  "start": 474.0,
+  "end": 476.0,
+  "peak": 0.960229218006134,
+  "windows": 3,
+  "type": "interaction"
+ },
+ {
+  "track": 6,
+  "start": 489.0,
+  "end": 492.0,
+  "peak": 0.9006876945495605,
+  "windows": 4,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 3,
+  "start": 503.0,
+  "end": 505.0,
+  "peak": 0.8931167721748352,
+  "windows": 3,
+  "type": "looking"
+ },
+ {
+  "track": 3,
+  "start": 517.0,
+  "end": 525.0,
+  "peak": 0.9496630430221558,
+  "windows": 9,
+  "type": "interaction"
+ },
+ {
+  "track": 1,
+  "start": 551.0,
+  "end": 557.0,
+  "peak": 0.957426905632019,
+  "windows": 7,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 1,
+  "start": 560.0,
+  "end": 568.0,
+  "peak": 0.9524208903312683,
+  "windows": 9,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 6,
+  "start": 591.0,
+  "end": 594.0,
+  "peak": 0.9455019235610962,
+  "windows": 4,
+  "type": "interaction"
+ },
+ {
+  "track": 3,
+  "start": 591.0,
+  "end": 596.0,
+  "peak": 0.9021511077880859,
+  "windows": 6,
+  "type": "interaction"
+ },
+ {
+  "track": 139,
+  "start": 593.0,
+  "end": 595.0,
+  "peak": 0.9151546955108643,
+  "windows": 3,
+  "type": "interaction"
+ },
+ {
+  "track": 1,
+  "start": 612.0,
+  "end": 614.0,
+  "peak": 0.9710816740989685,
+  "windows": 3,
+  "type": "interaction"
+ },
+ {
+  "track": 4,
+  "start": 664.0,
+  "end": 669.0,
+  "peak": 0.945115327835083,
+  "windows": 6,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 3,
+  "start": 690.0,
+  "end": 701.0,
+  "peak": 0.9468207359313965,
+  "windows": 12,
+  "type": "phone_cheatsheet"
+ },
+ {
+  "track": 190,
+  "start": 698.0,
+  "end": 700.0,
+  "peak": 0.8979169130325317,
+  "windows": 3,
+  "type": "phone_cheatsheet"
+ }
+]

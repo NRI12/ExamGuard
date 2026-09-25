@@ -1,0 +1,10 @@
+=== 1. setup: install, download, prepare, flow
+torch 2.11.0+cu128 | NVIDIA GeForce RTX 3090 | 24 GB VRAM
+18 files, 3.79 GB -> /workspace/cheating_detection_v3/data/raw/DOAN1
+download complete
+clips: 1735  incomplete: 0
+  train: normal 686, looking 121, interaction 238, phone_cheatsheet 240
+  val: normal 219, looking 14, interaction 106, phone_cheatsheet 111
+1735 clips, 1735 without flow -> /workspace/cheating_detection_v3/data/processed/flow
+Downloading: "https://download.pytorch.org/models/raft_small_C_T_V2-01064c6d.pth" to /root/.cache/torch/hub/checkpoints/raft_small_C_T_V2-01064c6d.pth
+ready: python -m cheating_v3 <command>   (outputs under /workspace/cheating_detection_v3/outputs)

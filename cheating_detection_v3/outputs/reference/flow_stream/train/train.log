@@ -1,0 +1,38 @@
+=== 4. flow stream
+run dir: /workspace/cheating_detection_v3/outputs/runs/cheating_detection_v3_flow_20260925_034756
+train 1285 clips, val 450 clips, classes ['normal', 'looking', 'interaction', 'phone_cheatsheet']
+arch flow: 16 frames every 0.20s | rgb None @ None | flow x3d_s @ 160
+ep   1 | loss 1.342 acc 0.342 | val acc 0.478 macroF1 0.250 cheat AUROC 0.714 R 0.255 P 0.711  *best*
+ep   2 | loss 1.211 acc 0.466 | val acc 0.509 macroF1 0.283 cheat AUROC 0.779 R 0.100 P 0.852  *best*
+ep   3 | loss 1.109 acc 0.531 | val acc 0.498 macroF1 0.217 cheat AUROC 0.795 R 0.043 P 1.000
+ep   4 | loss 0.990 acc 0.588 | val acc 0.498 macroF1 0.217 cheat AUROC 0.801 R 0.056 P 1.000
+ep   5 | loss 0.959 acc 0.595 | val acc 0.491 macroF1 0.174 cheat AUROC 0.793 R 0.013 P 1.000
+ep   6 | loss 0.868 acc 0.634 | val acc 0.507 macroF1 0.204 cheat AUROC 0.802 R 0.048 P 1.000
+ep   7 | loss 0.816 acc 0.645 | val acc 0.533 macroF1 0.281 cheat AUROC 0.795 R 0.104 P 1.000
+ep   8 | loss 0.767 acc 0.686 | val acc 0.573 macroF1 0.331 cheat AUROC 0.781 R 0.208 P 1.000  *best*
+ep   9 | loss 0.785 acc 0.709 | val acc 0.591 macroF1 0.389 cheat AUROC 0.771 R 0.290 P 0.957  *best*
+ep  10 | loss 0.765 acc 0.661 | val acc 0.616 macroF1 0.411 cheat AUROC 0.764 R 0.377 P 0.935  *best*
+ep  11 | loss 0.754 acc 0.670 | val acc 0.604 macroF1 0.408 cheat AUROC 0.754 R 0.442 P 0.857
+ep  12 | loss 0.714 acc 0.705 | val acc 0.651 macroF1 0.494 cheat AUROC 0.814 R 0.567 P 0.862  *best*
+ep  13 | loss 0.676 acc 0.679 | val acc 0.698 macroF1 0.592 cheat AUROC 0.855 R 0.632 P 0.869  *best*
+ep  14 | loss 0.679 acc 0.722 | val acc 0.716 macroF1 0.615 cheat AUROC 0.876 R 0.649 P 0.882  *best*
+ep  15 | loss 0.660 acc 0.746 | val acc 0.724 macroF1 0.628 cheat AUROC 0.891 R 0.675 P 0.886  *best*
+ep  16 | loss 0.607 acc 0.802 | val acc 0.729 macroF1 0.637 cheat AUROC 0.896 R 0.680 P 0.892  *best*
+ep  17 | loss 0.636 acc 0.767 | val acc 0.733 macroF1 0.637 cheat AUROC 0.897 R 0.710 P 0.886  *best*
+ep  18 | loss 0.607 acc 0.762 | val acc 0.727 macroF1 0.637 cheat AUROC 0.896 R 0.714 P 0.873
+ep  19 | loss 0.645 acc 0.760 | val acc 0.724 macroF1 0.627 cheat AUROC 0.897 R 0.719 P 0.878
+ep  20 | loss 0.600 acc 0.756 | val acc 0.729 macroF1 0.624 cheat AUROC 0.896 R 0.732 P 0.880
+ep  21 | loss 0.611 acc 0.757 | val acc 0.740 macroF1 0.634 cheat AUROC 0.896 R 0.749 P 0.883
+ep  22 | loss 0.639 acc 0.757 | val acc 0.740 macroF1 0.636 cheat AUROC 0.896 R 0.749 P 0.887
+ep  23 | loss 0.597 acc 0.771 | val acc 0.742 macroF1 0.639 cheat AUROC 0.896 R 0.745 P 0.887  *best*
+ep  24 | loss 0.598 acc 0.764 | val acc 0.738 macroF1 0.636 cheat AUROC 0.896 R 0.740 P 0.881
+ep  25 | loss 0.634 acc 0.804 | val acc 0.736 macroF1 0.632 cheat AUROC 0.895 R 0.740 P 0.881
+best epoch macroF1 0.639 | 3-view test:
+acc 0.751  macroF1 0.653  cheat AUROC 0.908  recall 0.753  precision 0.902
+F1    : {'normal': 0.84, 'looking': 0.419, 'interaction': 0.66, 'phone_cheatsheet': 0.694}
+confusion (rows = true):
+  normal            [200, 6, 8, 5]
+  looking           [0, 9, 5, 0]
+  interaction       [25, 9, 62, 10]
+  phone_cheatsheet  [32, 5, 7, 67]
+checkpoint: /workspace/cheating_detection_v3/outputs/runs/cheating_detection_v3_flow_20260925_034756/best.pt  (copy it to /workspace/cheating_detection_v3/weights/flow_x3d_s_best.pt to use it by default)
