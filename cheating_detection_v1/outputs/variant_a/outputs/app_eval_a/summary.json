@@ -1,0 +1,63 @@
+{
+ "windows": 8766,
+ "box_match_iou_median": 0.7348636790651727,
+ "window_macro_f1": 0.5297943804753343,
+ "window_f1": {
+  "normal": 0.964,
+  "looking": 0.273,
+  "interaction": 0.434,
+  "phone_cheatsheet": 0.449
+ },
+ "window_recall": {
+  "normal": 0.951,
+  "looking": 0.636,
+  "interaction": 0.403,
+  "phone_cheatsheet": 0.641
+ },
+ "window_support": {
+  "normal": 8292,
+  "looking": 33,
+  "interaction": 243,
+  "phone_cheatsheet": 198
+ },
+ "cheat_auroc": 0.8816201778543094,
+ "alert_precision": 0.6005917159763313,
+ "alert_recall": 0.4282700421940928,
+ "event_recall": {
+  "looking": "3/6",
+  "phone_cheatsheet": "9/12",
+  "interaction": "23/34"
+ },
+ "event_recall_total": 0.6730769230769231,
+ "false_alarm_episodes": 25,
+ "false_alarms_per_person_hour": 10.801935706878673,
+ "confusion": [
+  [
+   7886,
+   66,
+   107,
+   233
+  ],
+  [
+   10,
+   21,
+   1,
+   1
+  ],
+  [
+   105,
+   33,
+   98,
+   7
+  ],
+  [
+   67,
+   1,
+   3,
+   127
+  ]
+ ],
+ "thr_on": 0.85,
+ "thr_off": 0.7,
+ "min_windows": 2
+}
