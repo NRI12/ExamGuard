@@ -1,0 +1,2 @@
+train {'abnormal': 599, 'normal': 686}
+val {'abnormal': 231, 'normal': 219}

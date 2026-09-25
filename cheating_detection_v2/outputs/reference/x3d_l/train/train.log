@@ -1,0 +1,25 @@
+run dir: /workspace/runs/x3d_l_s5_clips_hr_v2_20260924_175344
+train 1285 clips, val 450 clips, classes ['normal', 'abnormal']
+x3d_l: 16x5 frames @ 312px, 107 steps/epoch
+ep   1 | loss 0.604 acc 0.636 (15 clip/s) | val acc 0.689 macroF1 0.677 cheat AUROC 0.817 R 0.485 P 0.842 | F1 0.74 0.62  *best*
+ep   2 | loss 0.428 acc 0.796 (18 clip/s) | val acc 0.789 macroF1 0.787 cheat AUROC 0.895 R 0.684 P 0.878 | F1 0.81 0.77  *best*
+ep   3 | loss 0.392 acc 0.819 (18 clip/s) | val acc 0.860 macroF1 0.860 cheat AUROC 0.928 R 0.823 P 0.896 | F1 0.86 0.86  *best*
+ep   4 | loss 0.353 acc 0.834 (18 clip/s) | val acc 0.873 macroF1 0.873 cheat AUROC 0.933 R 0.848 P 0.899 | F1 0.87 0.87  *best*
+ep   5 | loss 0.333 acc 0.843 (18 clip/s) | val acc 0.878 macroF1 0.878 cheat AUROC 0.940 R 0.857 P 0.900 | F1 0.88 0.88  *best*
+ep   6 | loss 0.282 acc 0.883 (18 clip/s) | val acc 0.873 macroF1 0.873 cheat AUROC 0.945 R 0.840 P 0.907 | F1 0.87 0.87
+ep   7 | loss 0.297 acc 0.878 (18 clip/s) | val acc 0.878 macroF1 0.878 cheat AUROC 0.949 R 0.844 P 0.911 | F1 0.88 0.88
+ep   8 | loss 0.294 acc 0.863 (18 clip/s) | val acc 0.878 macroF1 0.878 cheat AUROC 0.949 R 0.848 P 0.907 | F1 0.88 0.88
+ep   9 | loss 0.276 acc 0.896 (18 clip/s) | val acc 0.871 macroF1 0.871 cheat AUROC 0.945 R 0.844 P 0.899 | F1 0.87 0.87
+ep  10 | loss 0.262 acc 0.890 (18 clip/s) | val acc 0.869 macroF1 0.869 cheat AUROC 0.944 R 0.840 P 0.898 | F1 0.87 0.87
+ep  11 | loss 0.270 acc 0.854 (18 clip/s) | val acc 0.880 macroF1 0.880 cheat AUROC 0.943 R 0.853 P 0.908 | F1 0.88 0.88  *best*
+ep  12 | loss 0.291 acc 0.867 (18 clip/s) | val acc 0.869 macroF1 0.869 cheat AUROC 0.941 R 0.831 P 0.906 | F1 0.87 0.87
+ep  13 | loss 0.263 acc 0.872 (18 clip/s) | val acc 0.871 macroF1 0.871 cheat AUROC 0.940 R 0.844 P 0.899 | F1 0.87 0.87
+ep  14 | loss 0.265 acc 0.902 (18 clip/s) | val acc 0.873 macroF1 0.873 cheat AUROC 0.940 R 0.840 P 0.907 | F1 0.87 0.87
+ep  15 | loss 0.264 acc 0.867 (18 clip/s) | val acc 0.869 macroF1 0.869 cheat AUROC 0.940 R 0.827 P 0.910 | F1 0.87 0.87
+BEST epoch macroF1 0.880  |  3-view: acc 0.880 macroF1 0.880 cheat AUROC 0.949 R 0.848 P 0.912
+classes   : ['normal', 'abnormal']
+F1        : [0.881, 0.879]
+recall    : [0.913, 0.848]
+confusion (rows=true):
+  normal            [200, 19]
+  abnormal          [35, 196]

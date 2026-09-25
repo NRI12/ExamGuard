@@ -1,0 +1,44 @@
+{
+ "windows": 8766,
+ "box_match_iou_median": 0.7348636790651727,
+ "window_macro_f1": 0.6642470590513652,
+ "window_f1": {
+  "normal": 0.926,
+  "cheating": 0.403
+ },
+ "window_recall": {
+  "normal": 0.871,
+  "cheating": 0.823
+ },
+ "window_support": {
+  "normal": 8292,
+  "cheating": 474
+ },
+ "cheat_auroc": 0.9108707034994841,
+ "alert_precision": 0.2876386687797147,
+ "alert_recall": 0.7658227848101266,
+ "event_recall": {
+  "looking": "6/6",
+  "phone_cheatsheet": "12/12",
+  "interaction": "32/34"
+ },
+ "model_classes": [
+  "normal",
+  "abnormal"
+ ],
+ "event_recall_total": 0.9615384615384616,
+ "false_alarm_episodes": 129,
+ "false_alarms_per_person_hour": 55.73798824749395,
+ "confusion": [
+  [
+   7219,
+   1073
+  ],
+  [
+   84,
+   390
+  ]
+ ],
+ "thr_on": 0.6,
+ "thr_off": 0.45
+}

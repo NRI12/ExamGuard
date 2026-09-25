@@ -1,0 +1,18 @@
+# Versions this project was trained and tested with (Vast.ai PyTorch template, RTX 3090, CUDA 12.8,
+# driver 595.84, Python 3.12.14). Install torch / torchvision from the matching CUDA index first.
+torch==2.11.0
+torchvision==0.26.0
+pytorchvideo @ git+https://github.com/facebookresearch/pytorchvideo.git
+fvcore==0.1.5.post20221221
+iopath==0.1.10
+av==18.1.0
+ultralytics==8.4.161
+lap==0.5.13
+opencv-python==5.0.0.93
+numpy==2.5.3
+scikit-learn==1.9.1
+PyYAML==6.0.3
+tqdm==4.70.0
+tensorboard==2.21.0
+gdown==6.4.0
+requests==2.34.2
