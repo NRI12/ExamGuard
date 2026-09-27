@@ -1,0 +1,19 @@
+FROM exam-monitoring-worker-gpu:local
+
+USER root
+
+RUN uv pip install \
+    --python /app/.venv/bin/python \
+    "ultralytics==8.4.147"
+
+RUN /app/.venv/bin/python -c "\
+import torch, torchvision, numpy, cv2; \
+from ultralytics import YOLO; \
+print('torch=', torch.__version__); \
+print('torchvision=', torchvision.__version__); \
+print('numpy=', numpy.__version__); \
+print('opencv=', cv2.__version__); \
+print('cuda=', torch.cuda.is_available()); \
+print('ultralytics=OK')"
+
+WORKDIR /research

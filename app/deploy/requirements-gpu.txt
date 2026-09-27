@@ -1,0 +1,35 @@
+# ExamGuard backend, NVIDIA GPU (RTX 3060, CUDA 12.6 wheels: NVIDIA driver >= 560), Python 3.11.
+# Same versions as backend/uv.lock (which only resolves for Linux) plus the X3D-L classifier packages.
+# Install:  uv pip install -r deploy/requirements-gpu.txt   (the torch index is declared below)
+--extra-index-url https://download.pytorch.org/whl/cu126
+--index-strategy unsafe-best-match
+
+torch==2.7.1+cu126
+torchvision==0.22.1+cu126
+
+fastapi==0.141.1
+uvicorn==0.52.1
+pydantic==2.13.4
+pydantic-settings==2.15.0
+SQLAlchemy==2.0.52
+alembic==1.19.0
+psycopg[binary]==3.3.4
+PyJWT==2.13.0
+pwdlib[argon2]==0.3.1
+python-multipart==0.0.32
+python-dotenv==1.2.2
+numpy==2.2.6
+opencv-python==4.12.0.88
+PyYAML==6.0.3
+Pillow==12.3.0
+ultralytics==8.4.155
+lap==0.5.12
+websockets==16.0
+psutil==7.2.2
+nvidia-ml-py==13.610.43
+
+# X3D-L classifier (cheating_detection_v1), pytorchvideo pinned to the commit validated on the RTX 3060
+pytorchvideo @ https://github.com/facebookresearch/pytorchvideo/archive/f3142bb05cdb56af0704ab6f0adfb0c7bbafe4a0.zip
+fvcore==0.1.5.post20221221
+iopath==0.1.10
+av==18.1.0

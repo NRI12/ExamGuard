@@ -1,0 +1,16 @@
+services:
+  backend:
+    image: examguard-backend-gpu:local
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities:
+                - gpu
+    build:
+      dockerfile: Dockerfile.gpu
+      args:
+        GPU_BASE_IMAGE: ${GPU_BASE_IMAGE:-exam-monitoring-python-cu126:torch2.7.1}
+        TORCH_FLAVOR: cu126

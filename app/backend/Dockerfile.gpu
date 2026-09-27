@@ -1,0 +1,43 @@
+ARG GPU_BASE_IMAGE=exam-monitoring-python-cu126:torch2.7.1
+FROM ${GPU_BASE_IMAGE}
+
+ARG TORCH_FLAVOR=cu126
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    UV_PROJECT_ENVIRONMENT=/app/.venv \
+    UV_LINK_MODE=copy \
+    YOLO_CONFIG_DIR=/tmp/ultralytics \
+    PATH=/app/.venv/bin:$PATH
+
+WORKDIR /app
+ENV PYTHONPATH=/app
+USER root
+
+# The reusable CUDA image also contains an older application snapshot. Keep only
+# its expensive Python/CUDA environment so this greenfield image cannot inherit
+# legacy source files or Alembic revisions.
+RUN find /app -mindepth 1 -maxdepth 1 ! -name .venv -exec rm -rf -- {} +
+
+# The local base already contains the expensive torch/torchvision cu126 environment.
+# Synchronizing the lock file keeps those matching distributions and only resolves
+# packages introduced since the reusable GPU base was created.
+COPY pyproject.toml uv.lock ./
+RUN --mount=type=cache,target=/root/.cache/uv,sharing=locked \
+    test "$TORCH_FLAVOR" = "cu126" \
+    && python -c "import torch, torchvision; assert torch.__version__ == '2.7.1+cu126'; assert torchvision.__version__ == '0.22.1+cu126'; assert torch.version.cuda == '12.6'; print('reusing torch', torch.__version__, 'CUDA', torch.version.cuda)" \
+    && uv sync \
+        --frozen \
+        --no-dev \
+        --no-install-project \
+        --extra cu126 \
+    && python -c "import cv2, lap, torch, torchvision, ultralytics, websockets; assert torch.__version__ == '2.7.1+cu126'; assert torchvision.__version__ == '0.22.1+cu126'; print('GPU runtime imports OK:', cv2.__version__, ultralytics.__version__, websockets.__version__)"
+
+COPY . .
+
+RUN chmod +x /app/scripts/start_backend.sh
+
+EXPOSE 8000
+
+CMD ["/app/scripts/start_backend.sh"]
