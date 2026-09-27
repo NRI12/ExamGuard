@@ -1,0 +1,117 @@
+{
+ "sessions": [
+  {
+   "id": "S07",
+   "video": "media/S07.mp4",
+   "duration": 732.0,
+   "persons": 6,
+   "events": 18
+  },
+  {
+   "id": "S08",
+   "video": "media/S08.mp4",
+   "duration": 656.64,
+   "persons": 6,
+   "events": 17
+  }
+ ],
+ "models": [
+  {
+   "id": "v1",
+   "name": "v1  X3D-L, 4 classes",
+   "classes": [
+    "normal",
+    "looking",
+    "interaction",
+    "phone_cheatsheet"
+   ],
+   "recommended": true,
+   "thr_on": 0.85,
+   "thr_off": 0.7,
+   "smooth": 3,
+   "min_windows": 2,
+   "note": "Recommended model. RGB X3D-L on a 3.2 s per-person window, 4 classes.",
+   "sessions": [
+    "S07",
+    "S08"
+   ]
+  },
+  {
+   "id": "v2",
+   "name": "v2  X3D-L, normal / abnormal",
+   "classes": [
+    "normal",
+    "abnormal"
+   ],
+   "thr_on": 0.85,
+   "thr_off": 0.7,
+   "smooth": 3,
+   "min_windows": 2,
+   "note": "Same network trained on 2 classes: flags behaviour without naming its type.",
+   "sessions": [
+    "S07",
+    "S08"
+   ]
+  },
+  {
+   "id": "v3",
+   "name": "v3  RGB + optical flow, fine-tuned fusion",
+   "classes": [
+    "normal",
+    "looking",
+    "interaction",
+    "phone_cheatsheet"
+   ],
+   "thr_on": 0.85,
+   "thr_off": 0.7,
+   "smooth": 3,
+   "min_windows": 2,
+   "note": "Two-stream model: X3D-L on RGB plus X3D-S on RAFT optical flow.",
+   "sessions": [
+    "S07",
+    "S08"
+   ]
+  },
+  {
+   "id": "v3late",
+   "name": "v3  RGB + optical flow, late fusion",
+   "classes": [
+    "normal",
+    "looking",
+    "interaction",
+    "phone_cheatsheet"
+   ],
+   "thr_on": 0.7,
+   "thr_off": 0.55,
+   "smooth": 3,
+   "min_windows": 3,
+   "note": "Average of the RGB and flow streams. Only S07 is available (S08 log lost with the old disk).",
+   "sessions": [
+    "S07"
+   ]
+  },
+  {
+   "id": "v1a",
+   "name": "v1 variant A  (interaction labels)",
+   "classes": [
+    "normal",
+    "looking",
+    "interaction",
+    "phone_cheatsheet"
+   ],
+   "thr_on": 0.85,
+   "thr_off": 0.7,
+   "smooth": 3,
+   "min_windows": 2,
+   "note": "Experiment: passive partner of whisper / tap events not labelled. Worse than v1 on interaction.",
+   "sessions": [
+    "S07",
+    "S08"
+   ]
+  }
+ ],
+ "video_size": [
+  1280,
+  720
+ ]
+}

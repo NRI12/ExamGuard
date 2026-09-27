@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cheating Detection Live</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22%3E%3Crect x=%222.5%22 y=%225%22 width=%2213%22 height=%2214%22 rx=%222.5%22 fill=%22%234ea1ff%22/%3E%3Cpath d=%22M15.5 10l6-3.5v11l-6-3.5z%22 fill=%22%234ea1ff%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="13" height="14" rx="2.5"/><path d="M15.5 10l6-3.5v11l-6-3.5z"/></svg>
+    <div>
+      <h1>Exam Cheating Detection</h1>
+      <p>Realtime replay of the per-person video classifier on sessions it was never trained on</p>
+    </div>
+  </div>
+  <div class="live" id="liveBadge" data-state="paused"><span class="dot"></span><span id="liveText">PAUSED</span></div>
+</header>
+
+<main class="layout">
+  <section class="stage-col">
+    <div class="stage" id="stage">
+      <video id="video" muted playsinline preload="auto"></video>
+      <canvas id="overlay"></canvas>
+      <div class="hud hud-left" id="hudLeft"></div>
+      <div class="hud hud-right" id="hudRight"></div>
+      <div class="loading" id="loading">Loading session</div>
+    </div>
+
+    <div class="transport">
+      <button class="icon-btn primary" id="playBtn" aria-label="Play">
+        <svg viewBox="0 0 24 24" class="i-play"><path d="M8 5.5v13l11-6.5z"/></svg>
+        <svg viewBox="0 0 24 24" class="i-pause"><rect x="6.5" y="5" width="4" height="14" rx="1"/><rect x="13.5" y="5" width="4" height="14" rx="1"/></svg>
+      </button>
+      <button class="icon-btn" id="restartBtn" aria-label="Restart" title="Restart (Home)">
+        <svg viewBox="0 0 24 24"><path d="M12 5a7 7 0 1 1-6.6 4.7" fill="none" stroke-width="2"/><path d="M4 4.5v5h5"/></svg>
+      </button>
+      <span class="clock"><span id="timeNow">00:00</span><span class="sep">/</span><span id="timeTotal">00:00</span></span>
+      <div class="seg" id="speedSeg" role="group" aria-label="Playback speed">
+        <button data-speed="0.5">0.5x</button><button data-speed="1" class="on">1x</button><button data-speed="2">2x</button><button data-speed="4">4x</button>
+      </div>
+      <div class="spacer"></div>
+      <button class="text-btn" id="prevEvent" title="Previous ground-truth event (,)">Previous event</button>
+      <button class="text-btn" id="nextEvent" title="Next ground-truth event (.)">Next event</button>
+      <button class="text-btn" id="nextAlert" title="Next model alert (A)">Next alert</button>
+    </div>
+
+    <div class="card timeline-card">
+      <div class="card-head">
+        <h2>Timeline</h2>
+        <div class="legend">
+          <span><i class="sw gt"></i>Ground truth</span>
+          <span><i class="sw alert"></i>Model alert</span>
+          <span><i class="sw hn"></i>Hard negative</span>
+          <label class="check small"><input type="checkbox" id="revealFuture"> Show future alerts</label>
+          <div class="seg" id="viewSeg" role="group" aria-label="Timeline range"><button data-view="follow" class="on">2 min</button><button data-view="whole">Whole session</button></div>
+        </div>
+      </div>
+      <canvas id="timeline" height="200"></canvas>
+    </div>
+
+    <div class="persons" id="persons"></div>
+
+    <div class="card">
+      <div class="card-head"><h2>Model comparison on this session</h2><span class="muted small">whole video, each model with its own rule (selected model uses the sliders)</span></div>
+      <div class="table-wrap"><table class="compare" id="compare"></table></div>
+    </div>
+  </section>
+
+  <aside class="side">
+    <div class="card">
+      <div class="card-head"><h2>Source</h2></div>
+      <label class="field"><span>Session</span><select id="sessionSel"></select></label>
+      <label class="field"><span>Model</span><select id="modelSel"></select></label>
+      <p class="note" id="modelNote"></p>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><h2>Decision rule</h2><button class="text-btn small" id="resetRule">Reset</button></div>
+      <div class="slider"><label for="thrOn">Alert on at</label><output id="thrOnVal"></output><input type="range" id="thrOn" min="0.30" max="0.99" step="0.01"></div>
+      <div class="slider"><label for="thrOff">Alert off below</label><output id="thrOffVal"></output><input type="range" id="thrOff" min="0.20" max="0.95" step="0.01"></div>
+      <div class="slider"><label for="smooth">Smoothing (windows)</label><output id="smoothVal"></output><input type="range" id="smooth" min="1" max="8" step="1"></div>
+      <div class="slider"><label for="minWin">Minimum alert length (windows)</label><output id="minWinVal"></output><input type="range" id="minWin" min="1" max="6" step="1"></div>
+      <p class="note">Box label: normal shows P(normal), an alert shows the cheat score. cheat score = 1 - P(normal), averaged over the last windows. Changes are applied to the whole replay instantly.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><h2>Display</h2></div>
+      <label class="check"><input type="checkbox" id="showBoxes" checked> Model boxes and labels</label>
+      <label class="check"><input type="checkbox" id="showScores" checked> Class probability bars</label>
+      <label class="check"><input type="checkbox" id="showGT"> Ground-truth boxes and events</label>
+      <label class="check"><input type="checkbox" id="focusAlerts"> Highlight only people with alerts</label>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><h2>Live metrics</h2><span class="muted small" id="metricsNote">up to now</span></div>
+      <div class="tiles">
+        <div class="tile"><span class="label">Events caught</span><span class="value" id="mCaught">0 / 0</span></div>
+        <div class="tile"><span class="label">Events missed</span><span class="value" id="mMissed">0</span></div>
+        <div class="tile"><span class="label">Alerts raised</span><span class="value" id="mAlerts">0</span></div>
+        <div class="tile"><span class="label">False alarms</span><span class="value" id="mFA">0</span></div>
+        <div class="tile"><span class="label">Alert precision</span><span class="value" id="mPrec">-</span></div>
+        <div class="tile"><span class="label">False alarms / person-hour</span><span class="value" id="mFAh">-</span></div>
+      </div>
+    </div>
+
+    <div class="card list-card">
+      <div class="card-head tabs" role="tablist">
+        <button role="tab" class="tab on" data-tab="alerts">Alert log <span class="count" id="alertCount">0</span></button>
+        <button role="tab" class="tab" data-tab="events">Ground truth <span class="count" id="eventCount">0</span></button>
+        <button class="text-btn small" id="exportCsv" title="Download the alerts raised so far">Export CSV</button>
+      </div>
+      <ol class="feed" id="alertFeed"></ol>
+      <ol class="feed hidden" id="eventFeed"></ol>
+    </div>
+  </aside>
+</main>
+
+<footer class="foot">
+  Replay of real model outputs computed on GPU (YOLO11m + ByteTrack + classifier every 1 s on the last 3.2 s).
+  Keyboard: Space play / pause, Left / Right 5 s, comma / period previous / next event, A next alert.
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
