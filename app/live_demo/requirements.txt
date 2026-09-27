@@ -1,0 +1,13 @@
+# torch / torchvision come from the GPU image (Vast "PyTorch (Vast)" template: /venv/main, CUDA 12.8).
+# Versions of the eval-videos reference runs where it matters (ultralytics tracking).
+fastapi>=0.115
+uvicorn[standard]>=0.30
+ultralytics==8.4.161
+lap==0.5.13
+pytorchvideo @ git+https://github.com/facebookresearch/pytorchvideo.git
+fvcore
+iopath
+av
+numpy
+gdown>=5
+requests
