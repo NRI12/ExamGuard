@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "detector": {
+    "every_n_frames": 5,
+    "confidence_threshold": 0.25,
+    "iou_threshold": 0.7,
+    "image_size": 320,
+    "frequency_note": "initial deployment default; benchmark on representative panoramic videos"
+  },
+  "tracker": {
+    "min_match_score": 0.3,
+    "max_missed_frames": 30,
+    "high_confidence_threshold": 0.45
+  },
+  "seat_assignment": {
+    "min_score": 0.12,
+    "temporal_bonus": 0.2
+  },
+  "proposal": {
+    "max_width_ratio": 0.8,
+    "max_height_ratio": 0.95,
+    "max_area_ratio": 0.6
+  },
+  "debug_visualization": {
+    "enabled": false,
+    "note": "when enabled, draw detector-frame track and seat overlays"
+  }
+}

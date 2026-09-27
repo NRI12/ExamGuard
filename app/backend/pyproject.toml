@@ -1,0 +1,97 @@
+[project]
+name = "exam-monitoring-backend"
+version = "0.1.0"
+description = "Backend cho hệ thống phân tích hành vi bất thường trong phòng thi"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "fastapi==0.141.1",
+    "uvicorn==0.52.1",
+    "pydantic==2.13.4",
+    "pydantic-settings==2.15.0",
+    "SQLAlchemy==2.0.52",
+    "alembic==1.19.0",
+    "psycopg[binary]==3.3.4",
+    "PyJWT==2.13.0",
+    "pwdlib[argon2]==0.3.1",
+    "python-multipart==0.0.32",
+    "python-dotenv==1.2.2",
+    "numpy==2.2.6",
+    "opencv-python-headless==4.12.0.88",
+    "PyYAML==6.0.3",
+    "Pillow==12.3.0",
+    "ultralytics==8.4.155",
+    "lap==0.5.12",
+    "websockets==16.0",
+    "psutil==7.2.2",
+    "nvidia-ml-py==13.610.43",
+]
+
+[project.optional-dependencies]
+cpu = [
+    "torch==2.7.1",
+    "torchvision==0.22.1",
+]
+cu126 = [
+    "torch==2.7.1",
+    "torchvision==0.22.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest==9.1.1",
+    "httpx==0.28.1",
+    "ruff==0.16.4",
+    "mypy==2.3.1",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["."]
+markers = ["gpu: optional test requiring CUDA and the YOLO11n model artifact"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_configs = true
+check_untyped_defs = true
+no_implicit_optional = true
+
+[tool.uv]
+package = false
+environments = ["sys_platform == 'linux'"]
+exclude-dependencies = [
+    { package = { name = "ultralytics", version = "8.4.155" }, dependencies = ["opencv-python"] },
+]
+conflicts = [
+    [
+        { extra = "cpu" },
+        { extra = "cu126" },
+    ],
+]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cpu", extra = "cpu" },
+    { index = "pytorch-cu126", extra = "cu126" },
+]
+torchvision = [
+    { index = "pytorch-cpu", extra = "cpu" },
+    { index = "pytorch-cu126", extra = "cu126" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true

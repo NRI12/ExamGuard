@@ -1,0 +1,1 @@
+"""Shared concrete application capabilities."""

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "snapshot": {
+    "representative_frame": "event_midpoint",
+    "jpeg_quality": 90
+  },
+  "clip": {
+    "pre_padding_seconds": 2.0,
+    "post_padding_seconds": 2.0,
+    "max_seconds": 20.0,
+    "video_codec": "mp4v"
+  },
+  "annotated_video": {
+    "enabled": true,
+    "video_codec": "mp4v"
+  },
+  "overlay": {
+    "box_color_bgr": [0, 165, 255],
+    "text_color_bgr": [255, 255, 255],
+    "line_thickness": 2,
+    "font_path": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+    "font_size_px": 18
+  }
+}

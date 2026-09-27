@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "smoothing": {"method": "trailing_sliding_mean", "window_size": 3},
+  "thresholds": {
+    "source": "inherited_e3_deployment_defaults_not_calibrated_for_r3",
+    "version": "r3-initial-inherited-v1",
+    "values": {
+      "suspicious_looking": 0.70,
+      "communicating": 0.70,
+      "exchange_object": 0.70,
+      "using_phone/cheat_sheet": 0.70
+    }
+  },
+  "aggregation": {
+    "merge_gap_seconds": 2.0,
+    "confidence_summary": "mean",
+    "probability_summary": "mean"
+  },
+  "deduplication": {
+    "pair_confidence_tolerance": 0.05
+  }
+}
