@@ -1,0 +1,24 @@
+{
+  "model_name": "r3_tsm_r50_k400_diff_final",
+  "architecture": "TSM-ResNet50",
+  "pretraining": "Kinetics-400 TSM",
+  "fine_tuning": "differential",
+  "roi": "R3 Compact Actor-Context",
+  "view": "compact_actor_context_roi",
+  "num_segments": 8,
+  "input_size": 224,
+  "development_samples": 509,
+  "fixed_epochs": 8,
+  "epoch_selection_rule": "median best epoch across R3 5-fold CV",
+  "cv_best_epochs": [
+    10,
+    9,
+    7,
+    8,
+    5
+  ],
+  "cv_mean_macro_f1": 0.7208734365952747,
+  "cv_std_macro_f1": 0.07867965265650519,
+  "deployment_role": "runtime/deployment classifier",
+  "final_test_used_for_training": false
+}

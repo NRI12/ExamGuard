@@ -1,0 +1,7 @@
+{
+  "normal": 0,
+  "suspicious_looking": 1,
+  "communicating": 2,
+  "exchange_object": 3,
+  "using_phone/cheat_sheet": 4
+}

@@ -1,0 +1,22 @@
+{
+  "deployment_model": "E3",
+  "architecture": "KineticsTSMClassifier",
+  "backbone": "ResNet50",
+  "pretraining": "Kinetics TSM T8",
+  "num_classes": 5,
+  "num_segments": 8,
+  "input_size": 224,
+  "modality": "RGB",
+  "fold_div": 8,
+  "dropout": 0.6,
+  "checkpoint_key": "model_state",
+  "checkpoint_filename": "best.pt",
+  "temporary_demo_checkpoint": {
+    "experiment": "r50_kinetics_tsm_diff_ft",
+    "view": "event_roi",
+    "fold": 2,
+    "best_epoch": 3,
+    "val_macro_f1": 0.890837,
+    "note": "Demo candidate only. Replace with final development-trained checkpoint when available."
+  }
+}

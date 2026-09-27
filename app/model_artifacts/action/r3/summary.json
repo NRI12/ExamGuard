@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "model": "TSM-ResNet50",
+  "initialization": "Kinetics-400 TSM",
+  "view": "compact_actor_context_roi",
+  "training_samples": 509,
+  "fixed_epochs": 8,
+  "final_train_macro_f1": 0.999999999999482,
+  "checkpoint": "/content/r3_tsm_r50_k400_diff_final/model.pth",
+  "note": "Training-set metric only; not an independent evaluation metric."
+}

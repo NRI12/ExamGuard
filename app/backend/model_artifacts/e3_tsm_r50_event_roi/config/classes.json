@@ -1,0 +1,17 @@
+{
+  "class_to_idx": {
+    "normal": 0,
+    "suspicious_looking": 1,
+    "communicating": 2,
+    "exchange_object": 3,
+    "using_phone/cheat_sheet": 4
+  },
+  "idx_to_class": {
+    "0": "normal",
+    "1": "suspicious_looking",
+    "2": "communicating",
+    "3": "exchange_object",
+    "4": "using_phone/cheat_sheet"
+  },
+  "num_classes": 5
+}

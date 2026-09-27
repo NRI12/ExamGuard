@@ -1,0 +1,4 @@
+session_id,camera_id,seat_id,participant_id,global_subject_id,x1,y1,x2,y2,neighbors
+EXAMPLE_SESSION,CAM01,seat_01,EXAMPLE_P01,EXAMPLE_U01,0.05,0.15,0.25,0.85,seat_02
+EXAMPLE_SESSION,CAM01,seat_02,EXAMPLE_P02,EXAMPLE_U02,0.27,0.15,0.47,0.85,seat_01;seat_03
+EXAMPLE_SESSION,CAM01,seat_03,EXAMPLE_P03,EXAMPLE_U03,0.49,0.15,0.69,0.85,seat_02

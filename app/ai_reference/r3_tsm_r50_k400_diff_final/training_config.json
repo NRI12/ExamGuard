@@ -1,0 +1,48 @@
+{
+  "seed": 42,
+  "labels": {
+    "normal": 0,
+    "suspicious_looking": 1,
+    "communicating": 2,
+    "exchange_object": 3,
+    "using_phone/cheat_sheet": 4
+  },
+  "data": {
+    "num_segments": 8,
+    "input_size": 224,
+    "batch_size": 4,
+    "num_workers": 2,
+    "pin_memory": true,
+    "persistent_workers": true,
+    "train_horizontal_flip_p": 0.5,
+    "train_brightness_jitter": 0.1,
+    "train_contrast_jitter": 0.1
+  },
+  "model": {
+    "backbone": "resnet50",
+    "fold_div": 8,
+    "shift_place": "blockres",
+    "dropout": 0.6,
+    "minimum_checkpoint_coverage": 0.98,
+    "initialization": "kinetics400_tsm"
+  },
+  "fine_tuning": {
+    "partial_bn": true,
+    "early_backbone_lr": 1e-05,
+    "late_backbone_lr": 5e-05,
+    "head_lr": 0.0005
+  },
+  "training": {
+    "epochs": 8,
+    "weight_decay": 0.0005,
+    "class_weighting": "sqrt_inverse_frequency",
+    "label_smoothing": 0.05,
+    "grad_clip_norm": 5.0,
+    "gradient_accumulation_steps": 2,
+    "early_stopping_patience": 7,
+    "early_stopping_min_delta": 0.002,
+    "minimum_lr": 1e-07,
+    "amp": true
+  },
+  "experiment_name": "r3_tsm_r50_k400_diff_final"
+}

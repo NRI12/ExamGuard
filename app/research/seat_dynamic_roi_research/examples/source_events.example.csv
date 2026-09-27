@@ -1,0 +1,3 @@
+source_event_id,session_id,video_path,participant_id,global_subject_id,behavior,start_sec,end_sec,split,fold,subtype,quality,related_participant_id,note
+EVT_0001,EXAMPLE_SESSION,/absolute/path/session.mp4,EXAMPLE_P01,EXAMPLE_U01,normal,10.0,18.0,development,1,pick_up_dropped_object,good,,hard-negative normal example
+EVT_0002,EXAMPLE_SESSION,/absolute/path/session.mp4,EXAMPLE_P02,EXAMPLE_U02,exchange_object,40.0,47.0,development,1,hand_exchange,good,EXAMPLE_P03,example only

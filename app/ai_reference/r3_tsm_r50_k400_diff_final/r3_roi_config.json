@@ -1,0 +1,22 @@
+{
+  "view": "compact_actor_context_roi",
+  "output": {
+    "width": 224,
+    "height": 224,
+    "resize_mode": "stretch"
+  },
+  "single": {
+    "expand_x": 0.04,
+    "expand_top": 0.03,
+    "expand_bottom": 0.08,
+    "min_crop_width_px": 128,
+    "min_crop_height_px": 128
+  },
+  "pair": {
+    "expand_x": 0.025,
+    "expand_top": 0.02,
+    "expand_bottom": 0.06,
+    "min_crop_width_px": 128,
+    "min_crop_height_px": 128
+  }
+}

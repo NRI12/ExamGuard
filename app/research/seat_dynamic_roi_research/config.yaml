@@ -1,0 +1,38 @@
+seed: 20260914
+
+window:
+  seconds: 4.0
+  stride_seconds: 2.0
+  max_windows_per_event: 4
+  detector_sample_frames: 8
+
+detector:
+  model: yolo11n.pt
+  device: 0
+  imgsz: 640
+  conf: 0.25
+  iou: 0.70
+  person_class_id: 0
+
+association:
+  iou_weight: 0.55
+  center_weight: 0.35
+  inside_bonus_weight: 0.10
+  min_score: 0.12
+  min_detection_frames: 3
+
+local_roi:
+  expand_left: 0.20
+  expand_right: 0.20
+  expand_top: 0.10
+  expand_bottom: 0.35
+
+interaction_roi:
+  margin_ratio: 0.08
+  max_neighbors: 4
+
+output:
+  write_clips: true
+  codec: mp4v
+  save_previews: true
+  max_previews_per_class: 12

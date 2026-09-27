@@ -1,0 +1,30 @@
+{
+  "color_space": "RGB",
+  "decode_backend": "OpenCV",
+  "input_size": [
+    224,
+    224
+  ],
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "temporal_sampling": {
+    "method": "uniform_segment_center_for_inference",
+    "num_segments": 8,
+    "training_note": "Training used random temporal segment sampling; inference should be deterministic."
+  },
+  "roi": {
+    "training_view": "event_roi",
+    "service_mode": "pre_cropped_or_client_bbox",
+    "warning": "Event ROI is annotation-guided in the research pipeline. Raw full-frame deployment requires an upstream ROI/event localizer or a client-provided bbox."
+  }
+}

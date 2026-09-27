@@ -1,0 +1,12 @@
+{
+  "training_roi": "event_roi",
+  "bbox_format": "xyxy",
+  "bbox_coordinate_modes": [
+    "pixel",
+    "normalized_0_1"
+  ],
+  "service_default": "pre_cropped_video",
+  "raw_camera_policy": "require_client_bbox_or_upstream_localizer",
+  "clip_consistency": "same ROI policy across all sampled frames",
+  "research_note": "Event ROI performed best among Event/Actor/Hybrid in prior ROI study, but it is annotation-guided and is not an end-to-end deployable localizer by itself."
+}

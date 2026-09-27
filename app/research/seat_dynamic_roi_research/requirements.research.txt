@@ -1,0 +1,2 @@
+# Không cài lại torch/torchvision/numpy/opencv nếu đang dùng project environment.
+ultralytics==8.4.147
