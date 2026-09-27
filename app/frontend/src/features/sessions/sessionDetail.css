@@ -1,0 +1,6 @@
+.detail-heading-actions { display: flex; align-items: center; gap: 12px; }
+.detail-heading-actions .primary-button { margin-top: 0; }
+.detail-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--color-border); }
+.detail-tabs button { padding: 11px 16px; border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--color-text-secondary); font-weight: 700; }
+.detail-tabs button.active { border-bottom-color: var(--color-primary); color: var(--color-primary); }
+.session-overview-list { max-width: 820px; }

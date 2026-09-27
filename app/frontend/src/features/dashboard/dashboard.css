@@ -1,0 +1,11 @@
+.home-active-session, .home-ready { display: flex; align-items: center; justify-content: space-between; gap: 24px; border-top-color: var(--color-success); }
+.home-active-session h2, .home-ready h2 { margin-bottom: 6px; }
+.home-active-session p, .home-ready p { margin-bottom: 0; color: var(--color-text-secondary); }
+.home-active-session > div:last-child { display: flex; align-items: center; gap: 12px; }
+.home-active-session .primary-button, .home-ready .primary-button { margin-top: 0; }
+.home-ready > div { display: flex; align-items: flex-start; gap: 14px; }
+.home-session-list { display: grid; gap: 8px; margin-top: 16px; }
+.home-session-list > a { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 13px 14px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); color: inherit; text-decoration: none; }
+.home-session-list > a:hover { border-color: #80bdff; background: #f8fbff; }
+.home-session-list a > span:first-child { display: grid; gap: 4px; }
+.home-session-list small { color: var(--color-text-secondary); }
