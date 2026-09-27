@@ -1,0 +1,30 @@
+{
+  "status": "COMPLETED_ACCURACY_GATE_FAILED",
+  "calibration_completed": true,
+  "selected_thresholds_written": true,
+  "deployment_approved": false,
+  "production_event_detection_enabled": false,
+  "dataset_id": "exam_dataset_pilot-checkpoint5-runtime-events",
+  "calibration_sessions": ["S00", "S01", "S02", "S03", "S04"],
+  "excluded_final_test_sessions": ["S05", "S06", "S07", "S08"],
+  "final_test_run": false,
+  "duration_minutes": 52.24066666666667,
+  "raw_action_prediction_count": 20210,
+  "raw_metrics": {
+    "macro_f1": 0.23319621941039848,
+    "weighted_f1": 0.7171253016049332
+  },
+  "event_metrics": {
+    "tp": 9,
+    "fp": 53,
+    "fn": 77,
+    "precision": 0.14516129032258066,
+    "recall": 0.10465116279069768,
+    "f1": 0.12162162162162163,
+    "macro_event_f1": 0.10639765223771093,
+    "false_events_per_minute": 1.014535291790559,
+    "duplicate_event_rate": 0.0
+  },
+  "reason": "Production-path event quality is not deployable; communicating has zero true positives because the checkpoint development set contains no pair-normal samples and confounds two-person crop geometry with communication.",
+  "artifacts_dir": "docs/event_calibration/artifacts"
+}

@@ -1,0 +1,250 @@
+calibration_dataset_id: exam_dataset_pilot-checkpoint5-runtime-events
+tuned_splits:
+- development
+final_test_excluded: true
+deployment_approved: false
+deployment_note: Search artifacts never auto-enable production; review event metrics
+  first.
+search_space:
+  alpha:
+  - 0.4
+  - 0.6
+  start_threshold:
+  - 0.5
+  - 0.65
+  - 0.8
+  - 0.9
+  - 0.95
+  - 0.98
+  keep_threshold:
+  - 0.35
+  - 0.5
+  - 0.65
+  - 0.8
+  - 0.9
+  - 0.95
+  min_active_ms:
+  - 1500
+  - 3000
+  - 4500
+  end_grace_ms:
+  - 0
+  - 1500
+  - 3000
+  merge_gap_ms:
+  - 0
+  - 1500
+event_detection:
+  enabled: false
+  max_discontinuity_ms: 5000
+  dedup_temporal_iou: 0.3
+  dedup_max_gap_ms: 2000
+  suspicious_looking:
+    proposal_types:
+    - SINGLE
+    smoothing:
+      type: ema
+      alpha: 0.6
+    start_threshold: 0.65
+    keep_threshold: 0.5
+    min_active_ms: 3000
+    end_grace_ms: 0
+    merge_gap_ms: 0
+  communicating:
+    proposal_types:
+    - PAIR
+    smoothing:
+      type: ema
+      alpha: 0.4
+    start_threshold: 0.98
+    keep_threshold: 0.35
+    min_active_ms: 1500
+    end_grace_ms: 0
+    merge_gap_ms: 0
+  exchange_object:
+    proposal_types:
+    - PAIR
+    smoothing:
+      type: ema
+      alpha: 0.6
+    start_threshold: 0.5
+    keep_threshold: 0.35
+    min_active_ms: 4500
+    end_grace_ms: 0
+    merge_gap_ms: 0
+  using_phone_cheat_sheet:
+    proposal_types:
+    - SINGLE
+    smoothing:
+      type: ema
+      alpha: 0.4
+    start_threshold: 0.5
+    keep_threshold: 0.35
+    min_active_ms: 4500
+    end_grace_ms: 1500
+    merge_gap_ms: 0
+validation_metrics:
+  suspicious_looking:
+    tp: 4
+    fp: 10
+    fn: 32
+    precision: 0.2857142857142857
+    recall: 0.1111111111111111
+    f1: 0.16
+    per_class:
+      suspicious_looking:
+        tp: 4
+        fp: 10
+        fn: 32
+        precision: 0.2857142857142857
+        recall: 0.1111111111111111
+        f1: 0.16
+      communicating:
+        tp: 0
+        fp: 0
+        fn: 0
+        precision: 0.0
+        recall: 0.0
+        f1: 0.0
+      exchange_object:
+        tp: 0
+        fp: 0
+        fn: 0
+        precision: 0.0
+        recall: 0.0
+        f1: 0.0
+      using_phone_cheat_sheet:
+        tp: 0
+        fp: 0
+        fn: 0
+        precision: 0.0
+        recall: 0.0
+        f1: 0.0
+    macro_event_f1: 0.04
+    false_events_per_minute: 0.19142175316803
+    duplicate_event_rate: 0.0
+    event_counts:
+      suspicious_looking: 14
+  communicating:
+    tp: 0
+    fp: 6
+    fn: 16
+    precision: 0.0
+    recall: 0.0
+    f1: 0.0
+    per_class:
+      suspicious_looking:
+        tp: 0
+        fp: 0
+        fn: 0
+        precision: 0.0
+        recall: 0.0
+        f1: 0.0
+      communicating:
+        tp: 0
+        fp: 6
+        fn: 16
+        precision: 0.0
+        recall: 0.0
+        f1: 0.0
+      exchange_object:
+        tp: 0
+        fp: 0
+        fn: 0
+        precision: 0.0
+        recall: 0.0
+        f1: 0.0
+      using_phone_cheat_sheet:
+        tp: 0
+        fp: 0
+        fn: 0
+        precision: 0.0
+        recall: 0.0
+        f1: 0.0
+    macro_event_f1: 0.0
+    false_events_per_minute: 0.114853051900818
+    duplicate_event_rate: 0.0
+    event_counts:
+      communicating: 6
+  exchange_object:
+    tp: 3
+    fp: 28
+    fn: 13
+    precision: 0.0967741935483871
+    recall: 0.1875
+    f1: 0.12765957446808507
+    per_class:
+      suspicious_looking:
+        tp: 0
+        fp: 0
+        fn: 0
+        precision: 0.0
+        recall: 0.0
+        f1: 0.0
+      communicating:
+        tp: 0
+        fp: 0
+        fn: 0
+        precision: 0.0
+        recall: 0.0
+        f1: 0.0
+      exchange_object:
+        tp: 3
+        fp: 28
+        fn: 13
+        precision: 0.0967741935483871
+        recall: 0.1875
+        f1: 0.12765957446808507
+      using_phone_cheat_sheet:
+        tp: 0
+        fp: 0
+        fn: 0
+        precision: 0.0
+        recall: 0.0
+        f1: 0.0
+    macro_event_f1: 0.03191489361702127
+    false_events_per_minute: 0.535980908870484
+    duplicate_event_rate: 0.0
+    event_counts:
+      exchange_object: 31
+  using_phone_cheat_sheet:
+    tp: 2
+    fp: 9
+    fn: 16
+    precision: 0.18181818181818182
+    recall: 0.1111111111111111
+    f1: 0.13793103448275862
+    per_class:
+      suspicious_looking:
+        tp: 0
+        fp: 0
+        fn: 0
+        precision: 0.0
+        recall: 0.0
+        f1: 0.0
+      communicating:
+        tp: 0
+        fp: 0
+        fn: 0
+        precision: 0.0
+        recall: 0.0
+        f1: 0.0
+      exchange_object:
+        tp: 0
+        fp: 0
+        fn: 0
+        precision: 0.0
+        recall: 0.0
+        f1: 0.0
+      using_phone_cheat_sheet:
+        tp: 2
+        fp: 9
+        fn: 16
+        precision: 0.18181818181818182
+        recall: 0.1111111111111111
+        f1: 0.13793103448275862
+    macro_event_f1: 0.034482758620689655
+    false_events_per_minute: 0.172279577851227
+    duplicate_event_rate: 0.0
+    event_counts:
+      using_phone_cheat_sheet: 11

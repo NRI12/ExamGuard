@@ -1,0 +1,135 @@
+profile:
+  profile: gtx1650
+  device: cuda:0
+  precision: fp16
+  analysis:
+    target_fps: 12.5
+    minimum_fps: 10.0
+    queue_size: 1
+    drop_stale_frames: true
+  detector:
+    model: /models/detection/yolo11n.pt
+    imgsz: 640
+    conf: 0.1
+    iou: 0.5
+    classes:
+    - 0
+    max_det: 64
+    half: true
+    device: cuda:0
+    duplicate_suppression:
+      enabled: true
+      containment_threshold: 0.9
+      max_area_ratio: 0.7
+      max_center_distance_ratio: 0.35
+      preferred_detection_confidence: 0.25
+      larger_box_min_confidence_ratio: 0.65
+  tracker:
+    tracker_type: bytetrack
+    track_high_thresh: 0.25
+    track_low_thresh: 0.1
+    new_track_thresh: 0.4
+    track_buffer: 30
+    match_thresh: 0.8
+    fuse_score: true
+  diagnostics:
+    publish_hz: 2.0
+  identity:
+    mode: logical_track
+  logical_tracking:
+    center_history_size: 6
+    raw_track_history_size: 8
+    recovery:
+      max_lost_ms: 5500
+      max_position_distance: 0.18
+      min_scale_similarity: 0.4
+      min_score: 0.55
+      ambiguity_margin: 0.08
+      position_weight: 0.55
+      motion_weight: 0.25
+      scale_weight: 0.2
+  reid:
+    enabled: false
+    mode: on_demand
+    encoder: hsv_histogram_v1
+    max_batch_size: 16
+    min_similarity: 0.72
+    appearance_weight: 0.45
+    min_combined_score: 0.68
+    ambiguity_margin: 0.06
+    prototype_alpha: 0.2
+    prototype_seed_delay_ms: 800
+    min_prototype_confidence: 0.5
+    max_request_age_ms: 250
+  dynamic_neighbors:
+    enabled: true
+    max_neighbors_per_actor: 2
+    max_horizontal_gap_ratio: 2.5
+    max_vertical_gap_ratio: 0.75
+    min_scale_similarity: 0.4
+  seat_assignment:
+    enabled: true
+    overlap_weight: 0.7
+    distance_weight: 0.3
+    min_score: 0.35
+    seat_expand_ratio: 0.08
+    confirm_ms: 600
+    release_ms: 1500
+    switch_margin: 0.15
+    switch_confirm_ms: 800
+  action_recognition:
+    enabled: false
+    model: /models/action/r3/model.pth
+    checkpoint_sha256: c5ef406cfe404d2883575d8dcf1306fd7bebc6d6b1ec723b5093f2a3e09b357c
+    architecture: TSM-ResNet50
+    num_segments: 8
+    input_size: 224
+    clip_span_ms: 4000
+    capture_interval_ms: 200
+    sample_tolerance_ms: 180
+    max_gap_ms: 750
+    precision: fp32
+    scheduling:
+      prediction_stride_ms: 1500
+      max_batch_size: 2
+      max_queue_size: 1
+      max_prediction_age_ms: 2000
+      min_inference_interval_ms: 200
+    single_roi:
+      expand_x: 0.04
+      expand_top: 0.03
+      expand_bottom: 0.08
+      min_crop_width_px: 128
+      min_crop_height_px: 128
+    pair_roi:
+      expand_x: 0.025
+      expand_top: 0.02
+      expand_bottom: 0.06
+      min_crop_width_px: 128
+      min_crop_height_px: 128
+    adjacency:
+      row_tolerance_ratio: 0.75
+      max_horizontal_gap_ratio: 2.5
+  event_detection:
+    enabled: false
+    max_discontinuity_ms: 5000
+    dedup_temporal_iou: 0.3
+    dedup_max_gap_ms: 2000
+    suspicious_looking: null
+    communicating: null
+    exchange_object: null
+    using_phone_cheat_sheet: null
+  tracking_debug:
+    enabled: false
+    log_every_n_frames: 10
+    suspicious_iou_threshold: 0.5
+  ui:
+    tracking_interpolation: false
+    tracking_smoothing: false
+benchmark:
+  video: /repo-data/uploads/8eaf3ab1-5d40-430f-a48d-b365e66bdf5e/source.mp4
+  start_ms: 0
+  duration_seconds: 60.0
+  realtime_seconds: null
+  device_override: null
+  identity_experiment: motion

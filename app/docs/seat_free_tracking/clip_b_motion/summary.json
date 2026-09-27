@@ -1,0 +1,115 @@
+{
+  "video": "/repo-data/uploads/8eaf3ab1-5d40-430f-a48d-b365e66bdf5e/source.mp4",
+  "profile": "gtx1650",
+  "device": "cuda:0",
+  "identity_experiment": "motion",
+  "logical_tracking_summary": {
+    "unique_actor_ids": 11,
+    "active_logical_actors": 7,
+    "lost_logical_actors": 0,
+    "recoveries_total": 2,
+    "motion_recoveries": 2,
+    "reid_recoveries": 0,
+    "ambiguous_recoveries": 0,
+    "reid_requests_total": 0,
+    "reid_batches_total": 0,
+    "reid_dropped_stale": 0,
+    "reid_latency_ms_mean": null,
+    "reid_latency_ms_p95": null
+  },
+  "detector_config": {
+    "model": "/models/detection/yolo11n.pt",
+    "imgsz": 640,
+    "conf": 0.1,
+    "iou": 0.5,
+    "classes": [
+      0
+    ],
+    "max_det": 64,
+    "half": true,
+    "device": "cuda:0",
+    "duplicate_suppression": {
+      "enabled": true,
+      "containment_threshold": 0.9,
+      "max_area_ratio": 0.7,
+      "max_center_distance_ratio": 0.35,
+      "preferred_detection_confidence": 0.25,
+      "larger_box_min_confidence_ratio": 0.65
+    }
+  },
+  "tracker_config": {
+    "tracker_type": "bytetrack",
+    "track_high_thresh": 0.25,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.4,
+    "track_buffer": 30,
+    "match_thresh": 0.8,
+    "fuse_score": true
+  },
+  "video_duration_evaluated_ms": 60000,
+  "source_fps": 25.0,
+  "target_analysis_fps": 12.5,
+  "actual_analysis_fps": 45.44983858211509,
+  "frames_analyzed": 751,
+  "latency_ms": {
+    "detector": {
+      "average": 17.382047872001447,
+      "p95": 18.036050999853614,
+      "maximum": 28.649088999827654
+    },
+    "tracker": {
+      "average": 0.7602385706632049,
+      "p95": 0.8717389996490965,
+      "maximum": 1.6412200002378086
+    },
+    "pipeline": {
+      "average": 18.25035743866829,
+      "p95": 18.923545999768976,
+      "maximum": 29.502622000109113
+    },
+    "logical_tracking": {
+      "average": 0.10430696000366879,
+      "p95": 0.12637000008908217,
+      "maximum": 0.17946999969353783
+    }
+  },
+  "first_frame_latency_ms": {
+    "detector": 611.0663190002015,
+    "tracker": 0.5715309998777229,
+    "pipeline": 611.786623000171
+  },
+  "number_of_detections": 5145,
+  "number_of_raw_detections": 6610,
+  "number_of_suppressed_detections": 1465,
+  "number_of_created_tracks": 13,
+  "excess_track_creations_over_peak": 6,
+  "peak_simultaneous_tracks": 7,
+  "track_lifetime_ms": {
+    "minimum": 2640,
+    "median": 23840,
+    "p95": 60000.0,
+    "maximum": 60000
+  },
+  "track_lifecycle": {
+    "TRACK_CREATED": 13,
+    "TRACK_LOST": 17,
+    "TRACK_REMOVED": 8,
+    "TRACK_UPDATED": 4915
+  },
+  "raw_suspicious_overlap_pairs": 0,
+  "gpu": {
+    "average_util_pct": 63.5625,
+    "peak_vram_used_mb": 547.9375
+  },
+  "system": {
+    "average_cpu_util_pct": 13.46875,
+    "average_ram_used_mb": 9285.9033203125,
+    "peak_ram_used_mb": 9379.3984375
+  },
+  "quality_metrics": "Manual review required; no ground-truth MOT metrics are claimed.",
+  "artifacts": {
+    "summary": "/artifacts/seat_free_tracking/clip_b_motion/summary.json",
+    "frames_or_tracks": "/artifacts/seat_free_tracking/clip_b_motion/frames_or_tracks.csv",
+    "config_snapshot": "/artifacts/seat_free_tracking/clip_b_motion/config_snapshot.yaml"
+  }
+}

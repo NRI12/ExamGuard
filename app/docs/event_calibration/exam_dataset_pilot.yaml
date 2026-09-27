@@ -1,0 +1,1710 @@
+dataset_id: exam_dataset_pilot-checkpoint5-runtime-events
+source_dataset_root: /media/congthieu/UBUNTU_DATA4/DOWNLOAD/exam_dataset_pilot
+split_policy: checkpoint5_master_split.partition; final_test is excluded from tuning
+search_space:
+  alpha:
+  - 0.4
+  - 0.6
+  start_threshold:
+  - 0.5
+  - 0.65
+  - 0.8
+  - 0.9
+  - 0.95
+  - 0.98
+  keep_threshold:
+  - 0.35
+  - 0.5
+  - 0.65
+  - 0.8
+  - 0.9
+  - 0.95
+  min_active_ms:
+  - 1500
+  - 3000
+  - 4500
+  end_grace_ms:
+  - 0
+  - 1500
+  - 3000
+  merge_gap_ms:
+  - 0
+  - 1500
+sessions:
+- id: S00
+  video_id: S00_6P_1080p_25fps.mp4
+  source: /media/congthieu/UBUNTU_DATA4/DOWNLOAD/exam_dataset_pilot/normalized/S00_6P_1080p_25fps.mp4
+  split: development
+  start_ms: 0
+  duration_ms: 564560
+  seats:
+  - code: A1
+    bbox_norm:
+    - 0.14787266
+    - 0.16806667
+    - 0.29129922
+    - 0.49820741
+  - code: A2
+    bbox_norm:
+    - 0.36130313
+    - 0.15961296
+    - 0.57886354
+    - 0.42040185
+  - code: A3
+    bbox_norm:
+    - 0.61560599
+    - 0.10837037
+    - 0.80485755
+    - 0.38525926
+  - code: B1
+    bbox_norm:
+    - 0.0
+    - 0.20561111
+    - 0.306
+    - 0.68187037
+  - code: B2
+    bbox_norm:
+    - 0.39522917
+    - 0.22712963
+    - 0.6839375
+    - 0.57712963
+  - code: B3
+    bbox_norm:
+    - 0.69710156
+    - 0.15799074
+    - 0.97680469
+    - 0.51278704
+  adjacent_seat_pairs:
+  - - A1
+    - A2
+  - - A1
+    - B1
+  - - A2
+    - A3
+  - - A2
+    - B2
+  - - A3
+    - B3
+  - - B1
+    - B2
+  - - B2
+    - B3
+  events:
+  - id: S00_E_T0006_S00
+    behavior: suspicious_looking
+    start_ms: 31080
+    end_ms: 36280
+    seat_codes:
+    - B3
+  - id: S00_E_T0007_S00
+    behavior: communicating
+    start_ms: 58360
+    end_ms: 64320
+    seat_codes:
+    - A2
+    - A3
+  - id: S00_E_T0022_S00
+    behavior: suspicious_looking
+    start_ms: 86320
+    end_ms: 94640
+    seat_codes:
+    - A1
+  - id: S00_E_T0008_S00
+    behavior: normal
+    start_ms: 107280
+    end_ms: 111240
+    seat_codes:
+    - B1
+  - id: S00_E_T0009_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 108600
+    end_ms: 130600
+    seat_codes:
+    - A3
+  - id: S00_E_T0010_S00
+    behavior: normal
+    start_ms: 134720
+    end_ms: 139080
+    seat_codes:
+    - B2
+  - id: S00_E_T0011_S00
+    behavior: normal
+    start_ms: 154240
+    end_ms: 171800
+    seat_codes:
+    - B3
+  - id: S00_E_T0012_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 181880
+    end_ms: 193840
+    seat_codes:
+    - B1
+  - id: S00_E_T0013_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 242760
+    end_ms: 252000
+    seat_codes:
+    - A1
+  - id: S00_E_T0014_S00
+    behavior: normal
+    start_ms: 327400
+    end_ms: 329760
+    seat_codes:
+    - B2
+  - id: S00_E_T0015_S00
+    behavior: normal
+    start_ms: 328480
+    end_ms: 331240
+    seat_codes:
+    - B3
+  - id: S00_E_T0019_S00
+    behavior: exchange_object
+    start_ms: 337080
+    end_ms: 340560
+    seat_codes:
+    - B1
+    - B2
+  - id: S00_E_T0016_S00
+    behavior: suspicious_looking
+    start_ms: 343480
+    end_ms: 345040
+    seat_codes:
+    - A1
+  - id: S00_E_T0017_S00
+    behavior: suspicious_looking
+    start_ms: 379880
+    end_ms: 381840
+    seat_codes:
+    - A1
+  - id: S00_E_T0018_S00
+    behavior: suspicious_looking
+    start_ms: 392360
+    end_ms: 397920
+    seat_codes:
+    - A2
+  - id: S00_E_T0020_S00
+    behavior: communicating
+    start_ms: 414800
+    end_ms: 421160
+    seat_codes:
+    - B1
+    - B2
+  - id: S00_E_T0023_S00
+    behavior: exchange_object
+    start_ms: 446440
+    end_ms: 453080
+    seat_codes:
+    - A2
+    - A3
+  - id: S00_E_T0021_S00
+    behavior: suspicious_looking
+    start_ms: 513680
+    end_ms: 523680
+    seat_codes:
+    - B3
+- id: S01
+  video_id: S01_6P_1080p_25fps.mp4
+  source: /media/congthieu/UBUNTU_DATA4/DOWNLOAD/exam_dataset_pilot/normalized/S01_6P_1080p_25fps.mp4
+  split: development
+  start_ms: 0
+  duration_ms: 644680
+  seats:
+  - code: A1
+    bbox_norm:
+    - 0.04225651
+    - 0.14630833
+    - 0.30201953
+    - 0.47163981
+  - code: A2
+    bbox_norm:
+    - 0.35840573
+    - 0.10763611
+    - 0.56176094
+    - 0.45430463
+  - code: A3
+    bbox_norm:
+    - 0.59444271
+    - 0.09468981
+    - 0.80894271
+    - 0.39601389
+  - code: B1
+    bbox_norm:
+    - 0.0
+    - 0.27659722
+    - 0.32253698
+    - 0.67125463
+  - code: B2
+    bbox_norm:
+    - 0.3811737
+    - 0.20173704
+    - 0.64720651
+    - 0.59106667
+  - code: B3
+    bbox_norm:
+    - 0.71537969
+    - 0.22431111
+    - 0.9821099
+    - 0.51097407
+  adjacent_seat_pairs:
+  - - A1
+    - A2
+  - - A1
+    - B1
+  - - A2
+    - A3
+  - - A2
+    - B2
+  - - A3
+    - B3
+  - - B1
+    - B2
+  - - B2
+    - B3
+  events:
+  - id: S01_E_T0006_S00
+    behavior: suspicious_looking
+    start_ms: 11920
+    end_ms: 15880
+    seat_codes:
+    - B3
+  - id: S01_E_T0007_S00
+    behavior: communicating
+    start_ms: 44000
+    end_ms: 50160
+    seat_codes:
+    - A3
+    - A2
+  - id: S01_E_T0008_S00
+    behavior: communicating
+    start_ms: 57080
+    end_ms: 59440
+    seat_codes:
+    - A3
+    - A2
+  - id: S01_E_T0009_S00
+    behavior: communicating
+    start_ms: 59920
+    end_ms: 61720
+    seat_codes:
+    - A3
+    - A2
+  - id: S01_E_T0010_S00
+    behavior: normal
+    start_ms: 78840
+    end_ms: 84400
+    seat_codes:
+    - B1
+  - id: S01_E_T0011_S00
+    behavior: suspicious_looking
+    start_ms: 108800
+    end_ms: 113160
+    seat_codes:
+    - A1
+  - id: S01_E_T0012_S00
+    behavior: exchange_object
+    start_ms: 144320
+    end_ms: 147520
+    seat_codes:
+    - B2
+    - B1
+  - id: S01_E_T0013_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 171480
+    end_ms: 192200
+    seat_codes:
+    - B1
+  - id: S01_E_T0014_S00
+    behavior: communicating
+    start_ms: 217040
+    end_ms: 218880
+    seat_codes:
+    - B3
+    - A3
+  - id: S01_E_T0015_S00
+    behavior: suspicious_looking
+    start_ms: 219240
+    end_ms: 221000
+    seat_codes:
+    - A2
+  - id: S01_E_T0016_S00
+    behavior: communicating
+    start_ms: 257560
+    end_ms: 261000
+    seat_codes:
+    - A1
+    - B2
+  - id: S01_E_T0017_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 299400
+    end_ms: 310000
+    seat_codes:
+    - B2
+  - id: S01_E_T0018_S00
+    behavior: normal
+    start_ms: 317800
+    end_ms: 320760
+    seat_codes:
+    - A1
+  - id: S01_E_T0019_S00
+    behavior: suspicious_looking
+    start_ms: 363400
+    end_ms: 371640
+    seat_codes:
+    - A1
+  - id: S01_E_T0020_S00
+    behavior: suspicious_looking
+    start_ms: 387200
+    end_ms: 388560
+    seat_codes:
+    - A3
+  - id: S01_E_T0021_S00
+    behavior: suspicious_looking
+    start_ms: 394440
+    end_ms: 399920
+    seat_codes:
+    - B2
+  - id: S01_E_T0022_S00
+    behavior: suspicious_looking
+    start_ms: 401720
+    end_ms: 406720
+    seat_codes:
+    - B2
+  - id: S01_E_T0023_S00
+    behavior: exchange_object
+    start_ms: 437680
+    end_ms: 442160
+    seat_codes:
+    - A3
+    - A2
+  - id: S01_E_T0024_S00
+    behavior: normal
+    start_ms: 470280
+    end_ms: 500840
+    seat_codes:
+    - A1
+  - id: S01_E_T0025_S00
+    behavior: exchange_object
+    start_ms: 508000
+    end_ms: 512720
+    seat_codes:
+    - B2
+    - B1
+  - id: S01_E_T0026_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 524480
+    end_ms: 542520
+    seat_codes:
+    - B3
+  - id: S01_E_T0027_S00
+    behavior: suspicious_looking
+    start_ms: 543800
+    end_ms: 549400
+    seat_codes:
+    - B1
+  - id: S01_E_T0028_S00
+    behavior: normal
+    start_ms: 608240
+    end_ms: 611880
+    seat_codes:
+    - B3
+  - id: S01_E_T0029_S00
+    behavior: normal
+    start_ms: 634400
+    end_ms: 638600
+    seat_codes:
+    - A2
+- id: S02
+  video_id: S02_6P_1080p_25fps.mp4
+  source: /media/congthieu/UBUNTU_DATA4/DOWNLOAD/exam_dataset_pilot/normalized/S02_6P_1080p_25fps.mp4
+  split: development
+  start_ms: 0
+  duration_ms: 856800
+  seats:
+  - code: A1
+    bbox_norm:
+    - 0.15077839
+    - 0.3454287
+    - 0.35753932
+    - 0.71185278
+  - code: A2
+    bbox_norm:
+    - 0.39114583
+    - 0.24616944
+    - 0.5671875
+    - 0.5503713
+  - code: A3
+    bbox_norm:
+    - 0.55423411
+    - 0.24925556
+    - 0.71312526
+    - 0.4584
+  - code: B1
+    bbox_norm:
+    - 0.30218724
+    - 0.45789815
+    - 0.54503672
+    - 0.85715741
+  - code: B2
+    bbox_norm:
+    - 0.52402604
+    - 0.36642315
+    - 0.74610937
+    - 0.71555463
+  - code: B3
+    bbox_norm:
+    - 0.69034896
+    - 0.22506204
+    - 0.88534896
+    - 0.60011944
+  adjacent_seat_pairs:
+  - - A1
+    - A2
+  - - A1
+    - B1
+  - - A2
+    - A3
+  - - A2
+    - B2
+  - - A3
+    - B3
+  - - B1
+    - B2
+  - - B2
+    - B3
+  events:
+  - id: S02_E_T0005_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 16200
+    end_ms: 35640
+    seat_codes:
+    - B3
+  - id: S02_E_T0006_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 51480
+    end_ms: 74120
+    seat_codes:
+    - B2
+  - id: S02_E_T0007_S00
+    behavior: communicating
+    start_ms: 91720
+    end_ms: 95040
+    seat_codes:
+    - A1
+    - A2
+  - id: S02_E_T0008_S00
+    behavior: normal
+    start_ms: 116680
+    end_ms: 119800
+    seat_codes:
+    - B3
+  - id: S02_E_T0009_S00
+    behavior: suspicious_looking
+    start_ms: 147920
+    end_ms: 153960
+    seat_codes:
+    - B2
+  - id: S02_E_T0010_S00
+    behavior: suspicious_looking
+    start_ms: 172000
+    end_ms: 176560
+    seat_codes:
+    - A3
+  - id: S02_E_T0011_S00
+    behavior: exchange_object
+    start_ms: 228000
+    end_ms: 230760
+    seat_codes:
+    - A1
+    - A2
+  - id: S02_E_T0012_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 230920
+    end_ms: 238760
+    seat_codes:
+    - A2
+  - id: S02_E_T0031_S00
+    behavior: suspicious_looking
+    start_ms: 275520
+    end_ms: 282080
+    seat_codes:
+    - B3
+  - id: S02_E_T0013_S00
+    behavior: suspicious_looking
+    start_ms: 307040
+    end_ms: 313240
+    seat_codes:
+    - B1
+  - id: S02_E_T0014_S00
+    behavior: suspicious_looking
+    start_ms: 315440
+    end_ms: 320440
+    seat_codes:
+    - B1
+  - id: S02_E_T0015_S00
+    behavior: exchange_object
+    start_ms: 352200
+    end_ms: 362480
+    seat_codes:
+    - B2
+    - A2
+  - id: S02_E_T0016_S00
+    behavior: communicating
+    start_ms: 383480
+    end_ms: 386160
+    seat_codes:
+    - A3
+    - A2
+  - id: S02_E_T0032_S00
+    behavior: normal
+    start_ms: 413400
+    end_ms: 418080
+    seat_codes:
+    - B1
+  - id: S02_E_T0017_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 426520
+    end_ms: 444520
+    seat_codes:
+    - A2
+  - id: S02_E_T0018_S00
+    behavior: exchange_object
+    start_ms: 446320
+    end_ms: 451120
+    seat_codes:
+    - A3
+    - B3
+  - id: S02_E_T0019_S00
+    behavior: suspicious_looking
+    start_ms: 476960
+    end_ms: 481040
+    seat_codes:
+    - B3
+  - id: S02_E_T0020_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 538080
+    end_ms: 550160
+    seat_codes:
+    - B1
+  - id: S02_E_T0033_S00
+    behavior: suspicious_looking
+    start_ms: 563000
+    end_ms: 571640
+    seat_codes:
+    - B2
+  - id: S02_E_T0021_S00
+    behavior: normal
+    start_ms: 582080
+    end_ms: 590400
+    seat_codes:
+    - B3
+  - id: S02_E_T0023_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 600800
+    end_ms: 619240
+    seat_codes:
+    - A3
+  - id: S02_E_T0022_S00
+    behavior: normal
+    start_ms: 600960
+    end_ms: 603880
+    seat_codes:
+    - B2
+  - id: S02_E_T0024_S00
+    behavior: exchange_object
+    start_ms: 631480
+    end_ms: 636880
+    seat_codes:
+    - A1
+    - B1
+  - id: S02_E_T0025_S00
+    behavior: normal
+    start_ms: 667000
+    end_ms: 672080
+    seat_codes:
+    - A3
+  - id: S02_E_T0026_S00
+    behavior: exchange_object
+    start_ms: 749000
+    end_ms: 754000
+    seat_codes:
+    - B3
+    - A3
+  - id: S02_E_T0027_S00
+    behavior: communicating
+    start_ms: 777000
+    end_ms: 784080
+    seat_codes:
+    - B1
+    - B2
+  - id: S02_E_T0028_S00
+    behavior: exchange_object
+    start_ms: 800280
+    end_ms: 805520
+    seat_codes:
+    - B1
+    - A2
+  - id: S02_E_T0029_S00
+    behavior: communicating
+    start_ms: 841080
+    end_ms: 843720
+    seat_codes:
+    - A1
+    - B1
+  - id: S02_E_T0034_S00
+    behavior: suspicious_looking
+    start_ms: 843920
+    end_ms: 853000
+    seat_codes:
+    - B1
+- id: S03
+  video_id: S03_6P_1080p_25fps.mp4
+  source: /media/congthieu/UBUNTU_DATA4/DOWNLOAD/exam_dataset_pilot/normalized/S03_6P_1080p_25fps.mp4
+  split: development
+  start_ms: 0
+  duration_ms: 640120
+  seats:
+  - code: A1
+    bbox_norm:
+    - 0.22203281
+    - 0.32207037
+    - 0.37815469
+    - 0.5959
+  - code: A2
+    bbox_norm:
+    - 0.42088646
+    - 0.35320093
+    - 0.60621771
+    - 0.65398056
+  - code: A3
+    bbox_norm:
+    - 0.71302344
+    - 0.34094444
+    - 0.89129948
+    - 0.69768519
+  - code: B1
+    bbox_norm:
+    - 0.05522526
+    - 0.35925741
+    - 0.25364453
+    - 0.72950556
+  - code: B2
+    bbox_norm:
+    - 0.27692813
+    - 0.39066204
+    - 0.49448854
+    - 0.80333796
+  - code: B3
+    bbox_norm:
+    - 0.58971484
+    - 0.40953056
+    - 0.8294362
+    - 0.86656574
+  adjacent_seat_pairs:
+  - - A1
+    - A2
+  - - A1
+    - B1
+  - - A2
+    - A3
+  - - A2
+    - B2
+  - - A3
+    - B3
+  - - B1
+    - B2
+  - - B2
+    - B3
+  events:
+  - id: S03_E_T0006_S00
+    behavior: normal
+    start_ms: 5200
+    end_ms: 16280
+    seat_codes:
+    - B1
+  - id: S03_E_T0007_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 18600
+    end_ms: 39480
+    seat_codes:
+    - B2
+  - id: S03_E_T0008_S00
+    behavior: communicating
+    start_ms: 47400
+    end_ms: 53960
+    seat_codes:
+    - A3
+    - A2
+  - id: S03_E_T0009_S00
+    behavior: suspicious_looking
+    start_ms: 86520
+    end_ms: 92360
+    seat_codes:
+    - B3
+  - id: S03_E_T0010_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 126120
+    end_ms: 145880
+    seat_codes:
+    - A1
+  - id: S03_E_T0011_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 153480
+    end_ms: 171800
+    seat_codes:
+    - A2
+  - id: S03_E_T0012_S00
+    behavior: suspicious_looking
+    start_ms: 226640
+    end_ms: 232080
+    seat_codes:
+    - B2
+  - id: S03_E_T0013_S00
+    behavior: normal
+    start_ms: 233880
+    end_ms: 243560
+    seat_codes:
+    - B3
+  - id: S03_E_T0014_S00
+    behavior: suspicious_looking
+    start_ms: 252400
+    end_ms: 264280
+    seat_codes:
+    - A2
+  - id: S03_E_T0015_S00
+    behavior: suspicious_looking
+    start_ms: 278080
+    end_ms: 290080
+    seat_codes:
+    - B1
+  - id: S03_E_T0016_S00
+    behavior: suspicious_looking
+    start_ms: 295760
+    end_ms: 300200
+    seat_codes:
+    - A3
+  - id: S03_E_T0017_S00
+    behavior: exchange_object
+    start_ms: 387080
+    end_ms: 392280
+    seat_codes:
+    - A2
+    - A3
+  - id: S03_E_T0018_S00
+    behavior: communicating
+    start_ms: 418400
+    end_ms: 424520
+    seat_codes:
+    - B2
+    - B3
+  - id: S03_E_T0019_S00
+    behavior: suspicious_looking
+    start_ms: 432760
+    end_ms: 438360
+    seat_codes:
+    - A1
+  - id: S03_E_T0020_S00
+    behavior: suspicious_looking
+    start_ms: 512320
+    end_ms: 514120
+    seat_codes:
+    - B2
+  - id: S03_E_T0021_S00
+    behavior: suspicious_looking
+    start_ms: 518040
+    end_ms: 521080
+    seat_codes:
+    - B2
+  - id: S03_E_T0022_S00
+    behavior: normal
+    start_ms: 546320
+    end_ms: 550600
+    seat_codes:
+    - A3
+  - id: S03_E_T0023_S00
+    behavior: suspicious_looking
+    start_ms: 563200
+    end_ms: 570960
+    seat_codes:
+    - B3
+  - id: S03_E_T0024_S00
+    behavior: communicating
+    start_ms: 624800
+    end_ms: 627160
+    seat_codes:
+    - A2
+    - B2
+- id: S04
+  video_id: S04_2P_1080p_25fps.mp4
+  source: /media/congthieu/UBUNTU_DATA4/DOWNLOAD/exam_dataset_pilot/normalized/S04_2P_1080p_25fps.mp4
+  split: development
+  start_ms: 0
+  duration_ms: 428280
+  seats:
+  - code: A1
+    bbox_norm:
+    - 0.0
+    - 0.281975
+    - 0.29933568
+    - 0.79358426
+  - code: A2
+    bbox_norm:
+    - 0.29927057
+    - 0.15691667
+    - 0.55837005
+    - 0.58728704
+  adjacent_seat_pairs:
+  - - A1
+    - A2
+  events:
+  - id: S04_E_T0002_S00
+    behavior: suspicious_looking
+    start_ms: 13720
+    end_ms: 19240
+    seat_codes:
+    - A1
+  - id: S04_E_T0003_S00
+    behavior: suspicious_looking
+    start_ms: 24680
+    end_ms: 28880
+    seat_codes:
+    - A1
+  - id: S04_E_T0004_S00
+    behavior: exchange_object
+    start_ms: 44080
+    end_ms: 47880
+    seat_codes:
+    - A2
+    - A1
+  - id: S04_E_T0005_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 86400
+    end_ms: 100640
+    seat_codes:
+    - A1
+  - id: S04_E_T0006_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 112000
+    end_ms: 133400
+    seat_codes:
+    - A2
+  - id: S04_E_T0007_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 141400
+    end_ms: 155640
+    seat_codes:
+    - A1
+  - id: S04_E_T0008_S00
+    behavior: communicating
+    start_ms: 168760
+    end_ms: 171360
+    seat_codes:
+    - A2
+    - A1
+  - id: S04_E_T0009_S00
+    behavior: exchange_object
+    start_ms: 188120
+    end_ms: 192800
+    seat_codes:
+    - A1
+    - A2
+  - id: S04_E_T0010_S00
+    behavior: normal
+    start_ms: 208920
+    end_ms: 223160
+    seat_codes:
+    - A2
+  - id: S04_E_T0011_S00
+    behavior: suspicious_looking
+    start_ms: 242800
+    end_ms: 249240
+    seat_codes:
+    - A1
+  - id: S04_E_T0012_S00
+    behavior: suspicious_looking
+    start_ms: 254040
+    end_ms: 258760
+    seat_codes:
+    - A2
+  - id: S04_E_T0013_S00
+    behavior: normal
+    start_ms: 318320
+    end_ms: 322360
+    seat_codes:
+    - A1
+  - id: S04_E_T0014_S00
+    behavior: communicating
+    start_ms: 345960
+    end_ms: 349360
+    seat_codes:
+    - A1
+    - A2
+  - id: S04_E_T0015_S00
+    behavior: exchange_object
+    start_ms: 365360
+    end_ms: 373200
+    seat_codes:
+    - A1
+    - A2
+  - id: S04_E_T0016_S00
+    behavior: exchange_object
+    start_ms: 386320
+    end_ms: 392120
+    seat_codes:
+    - A1
+    - A2
+  - id: S04_E_T0017_S00
+    behavior: suspicious_looking
+    start_ms: 419760
+    end_ms: 424320
+    seat_codes:
+    - A2
+- id: S05
+  video_id: S05_6P_1080p_25fps.mp4
+  source: /media/congthieu/UBUNTU_DATA4/DOWNLOAD/exam_dataset_pilot/normalized/S05_6P_1080p_25fps.mp4
+  split: final_test
+  start_ms: 0
+  duration_ms: 624520
+  seats:
+  - code: A1
+    bbox_norm:
+    - 0.11692578
+    - 0.26375278
+    - 0.28507943
+    - 0.63808426
+  - code: A2
+    bbox_norm:
+    - 0.37817526
+    - 0.27250741
+    - 0.55021536
+    - 0.57444074
+  - code: A3
+    bbox_norm:
+    - 0.58470052
+    - 0.25377963
+    - 0.72221615
+    - 0.51716111
+  - code: B1
+    bbox_norm:
+    - 0.17595781
+    - 0.34633611
+    - 0.3929901
+    - 0.82540833
+  - code: B2
+    bbox_norm:
+    - 0.49022474
+    - 0.32863704
+    - 0.68183255
+    - 0.71794074
+  - code: B3
+    bbox_norm:
+    - 0.73016927
+    - 0.28229537
+    - 0.91914323
+    - 0.6216787
+  adjacent_seat_pairs:
+  - - A1
+    - A2
+  - - A1
+    - B1
+  - - A2
+    - A3
+  - - A2
+    - B2
+  - - A3
+    - B3
+  - - B1
+    - B2
+  - - B2
+    - B3
+  events:
+  - id: S05_E_T0006_S00
+    behavior: communicating
+    start_ms: 12880
+    end_ms: 18560
+    seat_codes:
+    - A1
+    - A2
+  - id: S05_E_T0007_S00
+    behavior: suspicious_looking
+    start_ms: 36240
+    end_ms: 38840
+    seat_codes:
+    - B2
+  - id: S05_E_T0008_S00
+    behavior: communicating
+    start_ms: 60000
+    end_ms: 69080
+    seat_codes:
+    - B1
+    - B2
+  - id: S05_E_T0009_S00
+    behavior: exchange_object
+    start_ms: 95760
+    end_ms: 98720
+    seat_codes:
+    - A1
+    - A2
+  - id: S05_E_T0010_S00
+    behavior: normal
+    start_ms: 110520
+    end_ms: 122440
+    seat_codes:
+    - B3
+  - id: S05_E_T0011_S00
+    behavior: suspicious_looking
+    start_ms: 132840
+    end_ms: 142240
+    seat_codes:
+    - A3
+  - id: S05_E_T0012_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 158240
+    end_ms: 179560
+    seat_codes:
+    - A1
+  - id: S05_E_T0013_S00
+    behavior: communicating
+    start_ms: 188840
+    end_ms: 196440
+    seat_codes:
+    - B2
+    - B3
+  - id: S05_E_T0014_S00
+    behavior: normal
+    start_ms: 231600
+    end_ms: 237040
+    seat_codes:
+    - A1
+  - id: S05_E_T0015_S00
+    behavior: suspicious_looking
+    start_ms: 291480
+    end_ms: 299080
+    seat_codes:
+    - B3
+  - id: S05_E_T0016_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 333080
+    end_ms: 345680
+    seat_codes:
+    - B1
+  - id: S05_E_T0017_S00
+    behavior: normal
+    start_ms: 359640
+    end_ms: 362160
+    seat_codes:
+    - A1
+  - id: S05_E_T0018_S00
+    behavior: communicating
+    start_ms: 373600
+    end_ms: 381440
+    seat_codes:
+    - A2
+    - A3
+  - id: S05_E_T0019_S00
+    behavior: exchange_object
+    start_ms: 403640
+    end_ms: 413760
+    seat_codes:
+    - B2
+    - B1
+  - id: S05_E_T0020_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 426520
+    end_ms: 444360
+    seat_codes:
+    - A2
+  - id: S05_E_T0021_S00
+    behavior: communicating
+    start_ms: 463040
+    end_ms: 467720
+    seat_codes:
+    - B3
+    - B2
+  - id: S05_E_T0022_S00
+    behavior: exchange_object
+    start_ms: 491120
+    end_ms: 496280
+    seat_codes:
+    - A1
+    - A2
+  - id: S05_E_T0023_S00
+    behavior: exchange_object
+    start_ms: 504760
+    end_ms: 509000
+    seat_codes:
+    - A2
+    - A1
+  - id: S05_E_T0024_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 522840
+    end_ms: 532360
+    seat_codes:
+    - A3
+  - id: S05_E_T0025_S00
+    behavior: suspicious_looking
+    start_ms: 547880
+    end_ms: 554120
+    seat_codes:
+    - B2
+  - id: S05_E_T0026_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 564840
+    end_ms: 584240
+    seat_codes:
+    - B3
+  - id: S05_E_T0027_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 605160
+    end_ms: 620960
+    seat_codes:
+    - B1
+- id: S06
+  video_id: S06_6P_1080p_25fps.mp4
+  source: /media/congthieu/UBUNTU_DATA4/DOWNLOAD/exam_dataset_pilot/normalized/S06_6P_1080p_25fps.mp4
+  split: final_test
+  start_ms: 0
+  duration_ms: 583800
+  seats:
+  - code: A1
+    bbox_norm:
+    - 0.12845234
+    - 0.28229352
+    - 0.30978203
+    - 0.63129537
+  - code: A2
+    bbox_norm:
+    - 0.37462891
+    - 0.27840185
+    - 0.55794922
+    - 0.56573889
+  - code: A3
+    bbox_norm:
+    - 0.562675
+    - 0.24905
+    - 0.72785625
+    - 0.52290556
+  - code: B1
+    bbox_norm:
+    - 0.17942422
+    - 0.3706963
+    - 0.41611224
+    - 0.7930037
+  - code: B2
+    bbox_norm:
+    - 0.49034557
+    - 0.33763333
+    - 0.68474297
+    - 0.7021
+  - code: B3
+    bbox_norm:
+    - 0.72813047
+    - 0.2835463
+    - 0.93662474
+    - 0.6344537
+  adjacent_seat_pairs:
+  - - A1
+    - A2
+  - - A1
+    - B1
+  - - A2
+    - A3
+  - - A2
+    - B2
+  - - A3
+    - B3
+  - - B1
+    - B2
+  - - B2
+    - B3
+  events:
+  - id: S06_E_T0005_S00
+    behavior: suspicious_looking
+    start_ms: 44000
+    end_ms: 48400
+    seat_codes:
+    - B2
+  - id: S06_E_T0007_S00
+    behavior: communicating
+    start_ms: 124440
+    end_ms: 130840
+    seat_codes:
+    - A1
+    - A2
+  - id: S06_E_T0008_S00
+    behavior: exchange_object
+    start_ms: 148520
+    end_ms: 158320
+    seat_codes:
+    - B2
+    - B3
+  - id: S06_E_T0009_S00
+    behavior: normal
+    start_ms: 175200
+    end_ms: 181520
+    seat_codes:
+    - A2
+  - id: S06_E_T0010_S00
+    behavior: suspicious_looking
+    start_ms: 205120
+    end_ms: 213000
+    seat_codes:
+    - A1
+  - id: S06_E_T0011_S00
+    behavior: communicating
+    start_ms: 266200
+    end_ms: 274600
+    seat_codes:
+    - A2
+    - A3
+  - id: S06_E_T0012_S00
+    behavior: exchange_object
+    start_ms: 300520
+    end_ms: 307760
+    seat_codes:
+    - A1
+    - B1
+  - id: S06_E_T0013_S00
+    behavior: suspicious_looking
+    start_ms: 349600
+    end_ms: 357600
+    seat_codes:
+    - A2
+  - id: S06_E_T0014_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 373200
+    end_ms: 391360
+    seat_codes:
+    - B3
+  - id: S06_E_T0015_S00
+    behavior: normal
+    start_ms: 404920
+    end_ms: 415400
+    seat_codes:
+    - A2
+  - id: S06_E_T0021_S00
+    behavior: communicating
+    start_ms: 445080
+    end_ms: 449800
+    seat_codes:
+    - A3
+    - B2
+  - id: S06_E_T0016_S00
+    behavior: communicating
+    start_ms: 472680
+    end_ms: 483640
+    seat_codes:
+    - A2
+    - A1
+  - id: S06_E_T0017_S00
+    behavior: suspicious_looking
+    start_ms: 500680
+    end_ms: 506400
+    seat_codes:
+    - A1
+  - id: S06_E_T0018_S00
+    behavior: communicating
+    start_ms: 520520
+    end_ms: 525680
+    seat_codes:
+    - B1
+    - B2
+  - id: S06_E_T0019_S00
+    behavior: exchange_object
+    start_ms: 544440
+    end_ms: 548480
+    seat_codes:
+    - A2
+    - A3
+  - id: S06_E_T0020_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 565120
+    end_ms: 578040
+    seat_codes:
+    - A2
+- id: S07
+  video_id: S07_6P_1080p_25fps.mp4
+  source: /media/congthieu/UBUNTU_DATA4/DOWNLOAD/exam_dataset_pilot/normalized/S07_6P_1080p_25fps.mp4
+  split: final_test
+  start_ms: 0
+  duration_ms: 732000
+  seats:
+  - code: A1
+    bbox_norm:
+    - 0.23204635
+    - 0.23206481
+    - 0.41170365
+    - 0.52593519
+  - code: A2
+    bbox_norm:
+    - 0.44305755
+    - 0.23682407
+    - 0.64166641
+    - 0.53406481
+  - code: A3
+    bbox_norm:
+    - 0.68597422
+    - 0.20478056
+    - 0.87374974
+    - 0.56951944
+  - code: B1
+    bbox_norm:
+    - 0.12381771
+    - 0.25382685
+    - 0.32965104
+    - 0.69284352
+  - code: B2
+    bbox_norm:
+    - 0.40892135
+    - 0.33493796
+    - 0.59941198
+    - 0.72728796
+  - code: B3
+    bbox_norm:
+    - 0.72139063
+    - 0.31148148
+    - 0.95430729
+    - 0.77296296
+  adjacent_seat_pairs:
+  - - A1
+    - A2
+  - - A1
+    - B1
+  - - A2
+    - A3
+  - - A2
+    - B2
+  - - A3
+    - B3
+  - - B1
+    - B2
+  - - B2
+    - B3
+  events:
+  - id: S07_E_T0006_S00
+    behavior: suspicious_looking
+    start_ms: 35320
+    end_ms: 39880
+    seat_codes:
+    - A1
+  - id: S07_E_T0007_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 69600
+    end_ms: 85240
+    seat_codes:
+    - B3
+  - id: S07_E_T0008_S00
+    behavior: normal
+    start_ms: 96320
+    end_ms: 100200
+    seat_codes:
+    - B1
+  - id: S07_E_T0009_S00
+    behavior: communicating
+    start_ms: 121520
+    end_ms: 127800
+    seat_codes:
+    - A2
+    - A3
+  - id: S07_E_T0010_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 150480
+    end_ms: 173240
+    seat_codes:
+    - B2
+  - id: S07_E_T0011_S00
+    behavior: normal
+    start_ms: 182200
+    end_ms: 193800
+    seat_codes:
+    - B1
+  - id: S07_E_T0012_S00
+    behavior: suspicious_looking
+    start_ms: 222080
+    end_ms: 227280
+    seat_codes:
+    - B2
+  - id: S07_E_T0013_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 242320
+    end_ms: 258560
+    seat_codes:
+    - A1
+  - id: S07_E_T0014_S00
+    behavior: communicating
+    start_ms: 290200
+    end_ms: 298760
+    seat_codes:
+    - B2
+    - A1
+  - id: S07_E_T0015_S00
+    behavior: exchange_object
+    start_ms: 314280
+    end_ms: 320120
+    seat_codes:
+    - A3
+    - B3
+  - id: S07_E_T0016_S00
+    behavior: normal
+    start_ms: 355080
+    end_ms: 359560
+    seat_codes:
+    - A3
+  - id: S07_E_T0017_S00
+    behavior: exchange_object
+    start_ms: 369400
+    end_ms: 375400
+    seat_codes:
+    - B1
+    - A2
+  - id: S07_E_T0018_S00
+    behavior: suspicious_looking
+    start_ms: 399160
+    end_ms: 406040
+    seat_codes:
+    - B1
+  - id: S07_E_T0019_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 426400
+    end_ms: 440040
+    seat_codes:
+    - A2
+  - id: S07_E_T0020_S00
+    behavior: normal
+    start_ms: 448320
+    end_ms: 452120
+    seat_codes:
+    - A3
+  - id: S07_E_T0021_S00
+    behavior: communicating
+    start_ms: 470280
+    end_ms: 475640
+    seat_codes:
+    - A2
+    - A1
+  - id: S07_E_T0022_S00
+    behavior: suspicious_looking
+    start_ms: 470880
+    end_ms: 476120
+    seat_codes:
+    - A3
+  - id: S07_E_T0023_S00
+    behavior: communicating
+    start_ms: 512560
+    end_ms: 521480
+    seat_codes:
+    - A2
+    - B3
+  - id: S07_E_T0024_S00
+    behavior: communicating
+    start_ms: 587040
+    end_ms: 593440
+    seat_codes:
+    - A2
+    - A3
+  - id: S07_E_T0025_S00
+    behavior: normal
+    start_ms: 612720
+    end_ms: 617240
+    seat_codes:
+    - B1
+  - id: S07_E_T0026_S00
+    behavior: normal
+    start_ms: 636000
+    end_ms: 639600
+    seat_codes:
+    - B2
+  - id: S07_E_T0027_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 664360
+    end_ms: 679440
+    seat_codes:
+    - A1
+  - id: S07_E_T0028_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 684920
+    end_ms: 698760
+    seat_codes:
+    - B3
+  - id: S07_E_T0029_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 711600
+    end_ms: 720880
+    seat_codes:
+    - A2
+- id: S08
+  video_id: S08_6P_1080p_25fps.mp4
+  source: /media/congthieu/UBUNTU_DATA4/DOWNLOAD/exam_dataset_pilot/normalized/S08_6P_1080p_25fps.mp4
+  split: final_test
+  start_ms: 0
+  duration_ms: 656640
+  seats:
+  - code: A1
+    bbox_norm:
+    - 0.28177057
+    - 0.26515093
+    - 0.42170339
+    - 0.51063056
+  - code: A2
+    bbox_norm:
+    - 0.423125
+    - 0.25876574
+    - 0.601875
+    - 0.57678611
+  - code: A3
+    bbox_norm:
+    - 0.62718724
+    - 0.29617593
+    - 0.81587005
+    - 0.64358333
+  - code: B1
+    bbox_norm:
+    - 0.08892161
+    - 0.30469444
+    - 0.27218776
+    - 0.6365463
+  - code: B2
+    bbox_norm:
+    - 0.26385417
+    - 0.33506481
+    - 0.4778125
+    - 0.70839815
+  - code: B3
+    bbox_norm:
+    - 0.49072943
+    - 0.42605278
+    - 0.72454661
+    - 0.82185093
+  adjacent_seat_pairs:
+  - - A1
+    - A2
+  - - A1
+    - B1
+  - - A2
+    - A3
+  - - A2
+    - B2
+  - - A3
+    - B3
+  - - B1
+    - B2
+  - - B2
+    - B3
+  events:
+  - id: S08_E_T0006_S00
+    behavior: suspicious_looking
+    start_ms: 24040
+    end_ms: 30680
+    seat_codes:
+    - A3
+  - id: S08_E_T0007_S00
+    behavior: communicating
+    start_ms: 102000
+    end_ms: 108720
+    seat_codes:
+    - B1
+    - B2
+  - id: S08_E_T0008_S00
+    behavior: exchange_object
+    start_ms: 124000
+    end_ms: 130160
+    seat_codes:
+    - B1
+    - A2
+  - id: S08_E_T0009_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 142640
+    end_ms: 159200
+    seat_codes:
+    - A1
+  - id: S08_E_T0010_S00
+    behavior: exchange_object
+    start_ms: 172720
+    end_ms: 180040
+    seat_codes:
+    - B3
+    - A3
+  - id: S08_E_T0011_S00
+    behavior: suspicious_looking
+    start_ms: 195680
+    end_ms: 200400
+    seat_codes:
+    - A2
+  - id: S08_E_T0012_S00
+    behavior: communicating
+    start_ms: 232960
+    end_ms: 241880
+    seat_codes:
+    - A1
+    - A2
+  - id: S08_E_T0013_S00
+    behavior: communicating
+    start_ms: 282280
+    end_ms: 287680
+    seat_codes:
+    - A1
+    - B2
+  - id: S08_E_T0014_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 335640
+    end_ms: 354440
+    seat_codes:
+    - A2
+  - id: S08_E_T0015_S00
+    behavior: exchange_object
+    start_ms: 375320
+    end_ms: 381880
+    seat_codes:
+    - B1
+    - B2
+  - id: S08_E_T0016_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 400080
+    end_ms: 424880
+    seat_codes:
+    - A3
+  - id: S08_E_T0017_S00
+    behavior: communicating
+    start_ms: 434920
+    end_ms: 439440
+    seat_codes:
+    - B1
+    - A1
+  - id: S08_E_T0018_S00
+    behavior: communicating
+    start_ms: 466640
+    end_ms: 472000
+    seat_codes:
+    - B1
+    - B2
+  - id: S08_E_T0019_S00
+    behavior: exchange_object
+    start_ms: 497160
+    end_ms: 503120
+    seat_codes:
+    - A2
+    - A3
+  - id: S08_E_T0020_S00
+    behavior: normal
+    start_ms: 515120
+    end_ms: 519280
+    seat_codes:
+    - B3
+  - id: S08_E_T0021_S00
+    behavior: communicating
+    start_ms: 573360
+    end_ms: 580000
+    seat_codes:
+    - A2
+    - B2
+  - id: S08_E_T0022_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 612440
+    end_ms: 625480
+    seat_codes:
+    - B1
+  - id: S08_E_T0023_S00
+    behavior: using_phone/cheat_sheet
+    start_ms: 638680
+    end_ms: 655080
+    seat_codes:
+    - B2

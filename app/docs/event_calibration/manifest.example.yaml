@@ -1,0 +1,40 @@
+# Schema example only. It is not calibration data and must never be used to
+# produce selected thresholds or scientific metrics.
+dataset_id: replace-with-versioned-runtime-event-dataset
+
+search_space:
+  alpha: [0.4, 0.6]
+  start_threshold: [0.5, 0.65, 0.8]
+  keep_threshold: [0.35, 0.5]
+  min_active_ms: [1500, 3000]
+  end_grace_ms: [1500, 3000]
+  merge_gap_ms: [1500]
+
+sessions:
+  - id: replace-development-session
+    video_id: replace-video-id
+    source: /absolute/path/to/labeled-source.mp4
+    split: development
+    start_ms: 0
+    duration_ms: 60000
+    seats:
+      - {code: A01, bbox_norm: [0.10, 0.20, 0.30, 0.90]}
+      - {code: A02, bbox_norm: [0.35, 0.20, 0.55, 0.90]}
+    # Optional explicit 2D room-layout graph. It is layout metadata, not event GT.
+    adjacent_seat_pairs:
+      - [A01, A02]
+    events:
+      - id: replace-event-id
+        behavior: communicating
+        start_ms: 12000
+        end_ms: 18000
+        seat_codes: [A01, A02]
+
+  - id: replace-final-test-session
+    video_id: replace-final-video-id
+    source: /absolute/path/to/final-test-source.mp4
+    split: final_test
+    start_ms: 0
+    duration_ms: 60000
+    seats: []
+    events: []

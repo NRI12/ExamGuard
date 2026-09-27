@@ -1,0 +1,29 @@
+validation_set: examguard_tracking_mini_v1
+created: 2026-09-21
+sampling_fps: 12.5
+clips:
+  - id: clip_a_adjacent_duplicates
+    source: data/uploads/66275e02-f8fd-496a-a0a5-f1e367e3ac59/source.mp4
+    source_sha256: 0bdd1259b558576be72752ac9e6b486a307dae3e682a41e0c4fd524bf3037135
+    start_ms: 0
+    duration_ms: 60000
+    visible_people: 7
+    scenarios: [static_seated, posture_change, adjacent_people, partial_occlusion]
+  - id: clip_b_partial_occlusion
+    source: data/uploads/8eaf3ab1-5d40-430f-a48d-b365e66bdf5e/source.mp4
+    source_sha256: 9f7dec8e7b2650d61801ea454689c0be55ac7444581bf385b6fe0e92c9219bde
+    start_ms: 0
+    duration_ms: 60000
+    visible_people: 7
+    scenarios: [static_seated, posture_change, adjacent_people, partial_occlusion]
+  - id: clip_c_stable_seated
+    source: data/uploads/a45616f0-6eb6-498c-ab9a-0e7f6a1f70f2/source.mp4
+    source_sha256: 2bf4963d84cbf8c31fa762d097d3af116be96e47c8beaa719a0f6938706d2e97
+    start_ms: 0
+    duration_ms: 60000
+    visible_people: 6
+    scenarios: [static_seated, posture_change, adjacent_people]
+limitations:
+  - No independent source contains a supervisor walking through the room.
+  - No selected segment contains a complete stand-move-sit sequence.
+  - Three other uploads were excluded because their SHA-256 matched clip_b exactly.

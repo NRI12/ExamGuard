@@ -1,0 +1,10 @@
+clip_id,target_timestamp_ms,actual_frame_timestamp_ms,visible_person_count,person_ids,active_tracks,track_ids,manual_result,notes
+clip_a_adjacent_duplicates,15000,14960,7,A1 A2 A3 A4 A5 A6 A7,8,1 2 3 4 5 6 7 8,DUPLICATE,One person has an additional partial-body track
+clip_a_adjacent_duplicates,30000,30000,7,A1 A2 A3 A4 A5 A6 A7,10,1 2 3 4 6 8 9 5 7 10,DUPLICATE,Three extra partial/full-body tracks
+clip_a_adjacent_duplicates,45000,44960,7,A1 A2 A3 A4 A5 A6 A7,9,1 2 3 4 8 9 6 10 5,DUPLICATE,Two extra partial/full-body tracks
+clip_b_partial_occlusion,15000,14960,7,B1 B2 B3 B4 B5 B6 B7,7,1 2 3 4 5 8 7,OK,All visible people have one active track
+clip_b_partial_occlusion,30000,30000,7,B1 B2 B3 B4 B5 B6 B7,7,1 2 3 4 5 7 8,OK,All visible people have one active track
+clip_b_partial_occlusion,45000,44960,7,B1 B2 B3 B4 B5 B6 B7,6,1 2 3 4 5 7,MISSED,Partially occluded rear person has no active track
+clip_c_stable_seated,15000,14960,6,C1 C2 C3 C4 C5 C6,6,1 2 3 4 5 6,OK,All visible people have one active track
+clip_c_stable_seated,30000,30000,6,C1 C2 C3 C4 C5 C6,6,1 2 3 4 5 6,OK,All visible people have one active track
+clip_c_stable_seated,45000,44960,6,C1 C2 C3 C4 C5 C6,6,1 2 3 4 5 6,OK,All visible people have one active track

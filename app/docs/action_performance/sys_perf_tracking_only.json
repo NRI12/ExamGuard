@@ -1,0 +1,59 @@
+{
+  "experiment_id": "SYS-PERF-TRACKING-ONLY",
+  "device": "cuda:0",
+  "precision": "fp32",
+  "scheduling": {
+    "prediction_stride_ms": 1500,
+    "max_batch_size": 2,
+    "max_queue_size": 1,
+    "max_prediction_age_ms": 2000,
+    "min_inference_interval_ms": 200
+  },
+  "model_load_count": 0,
+  "results": [
+    {
+      "experiment_id": "SYS-PERF-TRACKING-ONLY",
+      "clip_id": "clip_a_adjacent_extra_person",
+      "source": "/workspace/data/uploads/66275e02-f8fd-496a-a0a5-f1e367e3ac59/source.mp4",
+      "mode": "tracking_only",
+      "realtime_pacing": false,
+      "frames": 376,
+      "assigned_track_samples": 2047,
+      "processing_elapsed_s": 8.492424766000113,
+      "tracking_fps": 44.274751953686604,
+      "tracking_frame_ms_mean": 20.010199920152253,
+      "analysis_lag_ms_mean": 11.77386371543686,
+      "analysis_lag_ms_p95": 0.0,
+      "analysis_lag_ms_max": 633.8299430008192,
+      "analysis_lag_growth_ms": -59.02630342672346,
+      "active_candidates_mean": 5.444148936170213,
+      "active_candidates_max": 6.0,
+      "active_single_proposals_mean": 0.0,
+      "active_single_proposals_max": 0.0,
+      "active_pair_proposals_mean": 0.0,
+      "active_pair_proposals_max": 0.0,
+      "ready_proposals_mean": 0.0,
+      "ready_proposals_max": 0.0,
+      "single_proposals_with_predictions": 0,
+      "pair_proposals_with_predictions": 0,
+      "action_predictions": 0,
+      "action_predictions_per_second": 0.0,
+      "sample_predictions": [],
+      "action_diagnostics": null,
+      "action_errors": [],
+      "action_idle_before_stop": true,
+      "resources": {
+        "gpu_util_pct_mean": 56.73529411764706,
+        "gpu_util_pct_p95": 72.0,
+        "gpu_util_pct_max": 72.0,
+        "vram_used_mb_mean": 540.6433823529412,
+        "vram_used_mb_peak": 547.9375,
+        "cpu_util_pct_mean": 12.138235294117647,
+        "process_rss_mb_peak": 1510.48828125,
+        "torch_allocated_mb": 37.04931640625,
+        "torch_reserved_mb": 66.0,
+        "torch_peak_allocated_mb": 44.90771484375
+      }
+    }
+  ]
+}

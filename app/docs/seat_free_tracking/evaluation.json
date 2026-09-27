@@ -1,0 +1,123 @@
+{
+  "annotation_method": "Static human-calibrated actor regions; not dense MOT ground truth",
+  "minimum_match_iou": 0.1,
+  "modes": {
+    "raw": {
+      "clips": [
+        {
+          "clip_id": "clip_a_adjacent_extra_person",
+          "matched_samples": 4301,
+          "raw_fragmentation_transitions": 59,
+          "logical_id_switches": 59,
+          "recovered_transitions": 0,
+          "fragmentation_recovery_rate": 0.0,
+          "wrong_actor_region_links": 0
+        },
+        {
+          "clip_id": "clip_b_partial_occlusion_extra_person",
+          "matched_samples": 4502,
+          "raw_fragmentation_transitions": 4,
+          "logical_id_switches": 4,
+          "recovered_transitions": 0,
+          "fragmentation_recovery_rate": 0.0,
+          "wrong_actor_region_links": 0
+        },
+        {
+          "clip_id": "clip_c_stable_seated",
+          "matched_samples": 4408,
+          "raw_fragmentation_transitions": 42,
+          "logical_id_switches": 42,
+          "recovered_transitions": 0,
+          "fragmentation_recovery_rate": 0.0,
+          "wrong_actor_region_links": 0
+        }
+      ],
+      "aggregate": {
+        "matched_samples": 13211,
+        "raw_fragmentation_transitions": 105,
+        "logical_id_switches": 105,
+        "recovered_transitions": 0,
+        "wrong_actor_region_links": 0,
+        "fragmentation_recovery_rate": 0.0
+      }
+    },
+    "motion": {
+      "clips": [
+        {
+          "clip_id": "clip_a_adjacent_extra_person",
+          "matched_samples": 4301,
+          "raw_fragmentation_transitions": 59,
+          "logical_id_switches": 58,
+          "recovered_transitions": 1,
+          "fragmentation_recovery_rate": 0.01694915254237288,
+          "wrong_actor_region_links": 0
+        },
+        {
+          "clip_id": "clip_b_partial_occlusion_extra_person",
+          "matched_samples": 4502,
+          "raw_fragmentation_transitions": 4,
+          "logical_id_switches": 4,
+          "recovered_transitions": 0,
+          "fragmentation_recovery_rate": 0.0,
+          "wrong_actor_region_links": 0
+        },
+        {
+          "clip_id": "clip_c_stable_seated",
+          "matched_samples": 4408,
+          "raw_fragmentation_transitions": 42,
+          "logical_id_switches": 35,
+          "recovered_transitions": 7,
+          "fragmentation_recovery_rate": 0.16666666666666666,
+          "wrong_actor_region_links": 0
+        }
+      ],
+      "aggregate": {
+        "matched_samples": 13211,
+        "raw_fragmentation_transitions": 105,
+        "logical_id_switches": 97,
+        "recovered_transitions": 8,
+        "wrong_actor_region_links": 0,
+        "fragmentation_recovery_rate": 0.0761904761904762
+      }
+    },
+    "sparse_reid": {
+      "clips": [
+        {
+          "clip_id": "clip_a_adjacent_extra_person",
+          "matched_samples": 4301,
+          "raw_fragmentation_transitions": 59,
+          "logical_id_switches": 58,
+          "recovered_transitions": 1,
+          "fragmentation_recovery_rate": 0.01694915254237288,
+          "wrong_actor_region_links": 0
+        },
+        {
+          "clip_id": "clip_b_partial_occlusion_extra_person",
+          "matched_samples": 4502,
+          "raw_fragmentation_transitions": 4,
+          "logical_id_switches": 4,
+          "recovered_transitions": 0,
+          "fragmentation_recovery_rate": 0.0,
+          "wrong_actor_region_links": 0
+        },
+        {
+          "clip_id": "clip_c_stable_seated",
+          "matched_samples": 4408,
+          "raw_fragmentation_transitions": 42,
+          "logical_id_switches": 35,
+          "recovered_transitions": 7,
+          "fragmentation_recovery_rate": 0.16666666666666666,
+          "wrong_actor_region_links": 0
+        }
+      ],
+      "aggregate": {
+        "matched_samples": 13211,
+        "raw_fragmentation_transitions": 105,
+        "logical_id_switches": 97,
+        "recovered_transitions": 8,
+        "wrong_actor_region_links": 0,
+        "fragmentation_recovery_rate": 0.0761904761904762
+      }
+    }
+  }
+}

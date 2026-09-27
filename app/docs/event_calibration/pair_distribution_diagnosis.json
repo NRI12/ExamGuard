@@ -1,0 +1,40 @@
+{
+  "scope": "development S00-S04 only",
+  "final_test_used": false,
+  "training_manifest": "checkpoint5_compact_actor_context_roi.csv",
+  "development_training_actor_cardinality": {
+    "normal": {"samples": 218, "actor_count": 1, "median_crop_area_px": 141024.0},
+    "suspicious_looking": {"samples": 88, "actor_count": 1, "median_crop_area_px": 153180.0},
+    "using_phone_cheat_sheet": {"samples": 143, "actor_count": 1, "median_crop_area_px": 132460.0},
+    "communicating": {"samples": 27, "actor_count": 2, "median_crop_area_px": 332416.0},
+    "exchange_object": {"samples": 33, "actor_count": 2, "median_crop_area_px": 314464.0}
+  },
+  "pair_runtime_bias": {
+    "same_row_prediction_count": 6157,
+    "same_row_communicating_top1_rate": 0.8900438525255806,
+    "same_row_communicating_probability_p50": 0.8610500693321228,
+    "same_row_communicating_probability_p95": 0.9713464379310608,
+    "same_row_probability_ge_0_8_rate": 0.6038655189215527,
+    "cross_row_prediction_count": 4214,
+    "cross_row_communicating_top1_rate": 0.4563360227812055,
+    "cross_row_communicating_probability_p50": 0.31340549886226654,
+    "cross_row_communicating_probability_p95": 0.9200698733329773,
+    "cross_row_probability_ge_0_8_rate": 0.18082581869957284
+  },
+  "communicating_gt_vs_proposal_baseline": {
+    "aligned_prediction_count": 30,
+    "probability_delta_min": -0.29649975895881653,
+    "probability_delta_p50": -0.02412453293800354,
+    "probability_delta_max": 0.11369508504867554,
+    "positive_delta_rate": 0.43333333333333335
+  },
+  "refined_communicating_events": {
+    "count": 6,
+    "true_positive": 0,
+    "false_positive": 6,
+    "false_negative": 16,
+    "duration_ms_p50": 47120.0,
+    "duration_ms_max": 288240
+  },
+  "conclusion": "The checkpoint has no pair-normal development samples and strongly confounds two-person crop cardinality/geometry with communicating. Absolute or per-proposal relative thresholds cannot recover reliable communicating events."
+}
