@@ -4,18 +4,18 @@ ExamGuard theo dõi từng thí sinh qua camera phòng thi và cảnh báo theo 
 **nhìn bài bạn**, **trao đổi / chuyền đồ**, **dùng điện thoại hoặc tài liệu**. Hệ thống gắn cờ đoạn video để giám thị
 xem lại, không tự đưa ra kết luận thay con người.
 
-![Mô hình phát hiện thí sinh dùng điện thoại / tài liệu](docs/images/detect_phone.jpg)
-*Mô hình gắn cờ thí sinh #2 dùng điện thoại / tài liệu (0,93), các thí sinh còn lại bình thường.*
+![Giám sát phòng thi](docs/images/monitoring.png)
+*X3D-L gắn cờ P1 và P2 "Trao đổi" (94 %, 82 %) đúng lúc hai thí sinh thì thầm, bốn thí sinh còn lại bình thường.*
 
 ## Giao diện
-
-**Giám sát phòng thi**: video camera, trạng thái hệ thống và các sự kiện AI ghi nhận theo thời gian thực.
-
-![Giám sát phòng thi](docs/images/monitoring.png)
 
 **Danh sách sự kiện**: mỗi hành vi đáng ngờ kèm thí sinh, thời điểm trong video, độ tin cậy và trạng thái xác minh của giám thị.
 
 ![Danh sách sự kiện](docs/images/events.png)
+
+**Xác minh sự kiện**: giám thị xem lại đoạn video, rồi xác nhận vi phạm, bỏ qua (báo nhầm) hoặc đánh dấu cần xem lại. AI chỉ đánh dấu, quyết định thuộc về con người.
+
+<img src="docs/images/event_detail.png" alt="Xác minh sự kiện" width="360">
 
 **Live demo**: suy luận trên GPU đồng bộ với video, hiển thị khung và xác suất từng người, timeline cảnh báo so với nhãn thật, và so sánh các mô hình.
 
