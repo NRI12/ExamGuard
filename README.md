@@ -4,6 +4,23 @@ ExamGuard theo dõi từng thí sinh qua camera phòng thi và cảnh báo theo 
 **nhìn bài bạn**, **trao đổi / chuyền đồ**, **dùng điện thoại hoặc tài liệu**. Hệ thống gắn cờ đoạn video để giám thị
 xem lại, không tự đưa ra kết luận thay con người.
 
+![Mô hình phát hiện thí sinh dùng điện thoại / tài liệu](docs/images/detect_phone.jpg)
+*Mô hình gắn cờ thí sinh #2 dùng điện thoại / tài liệu (0,93), các thí sinh còn lại bình thường.*
+
+## Giao diện
+
+**Giám sát phòng thi**: video camera, trạng thái hệ thống và các sự kiện AI ghi nhận theo thời gian thực.
+
+![Giám sát phòng thi](docs/images/monitoring.png)
+
+**Danh sách sự kiện**: mỗi hành vi đáng ngờ kèm thí sinh, thời điểm trong video, độ tin cậy và trạng thái xác minh của giám thị.
+
+![Danh sách sự kiện](docs/images/events.png)
+
+**Live demo**: suy luận trên GPU đồng bộ với video, hiển thị khung và xác suất từng người, timeline cảnh báo so với nhãn thật, và so sánh các mô hình.
+
+![Live demo](docs/images/live_demo.png)
+
 ## Cách hoạt động
 
 ```
@@ -26,6 +43,9 @@ camera ─► YOLO11 (phát hiện người) ─► ByteTrack (gán ID từng ng
 | v3 hai luồng RGB + optical flow | 0,948 | 0,765 | 41 / 52 |
 
 \* F1 hai lớp, không so trực tiếp với bốn lớp.
+
+![Tỉ lệ phát hiện theo số báo động nhầm](docs/images/recall_vs_false_alarms.png)
+*Đánh đổi giữa tỉ lệ bắt được sự kiện gian lận và số báo động nhầm trên mỗi người mỗi giờ.*
 
 Giới hạn chính nằm ở dữ liệu: 186 sự kiện diễn lại, một phòng, một camera. Mô hình phù hợp để gắn cờ cho giám thị
 xem lại, chưa đủ tin cậy cho phòng học khác nếu không có dữ liệu gán nhãn từ phòng đó.
