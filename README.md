@@ -4,18 +4,26 @@ ExamGuard theo dõi từng thí sinh qua camera phòng thi và cảnh báo theo 
 **nhìn bài bạn**, **trao đổi / chuyền đồ**, **dùng điện thoại hoặc tài liệu**. Hệ thống gắn cờ đoạn video để giám thị
 xem lại, không tự đưa ra kết luận thay con người.
 
-![Giám sát phòng thi](docs/images/monitoring.png)
-*X3D-L gắn cờ P1 và P2 "Trao đổi" (94 %, 82 %) đúng lúc hai thí sinh thì thầm, bốn thí sinh còn lại bình thường.*
+## Mô hình nhận ra gì
+
+Ảnh vẽ trực tiếp từ dự đoán của mô hình v1 X3D-L (bản cuối) trên tập kiểm tra S07 / S08, với đúng luật cảnh báo của hệ
+thống (làm mượt 3 cửa sổ, bật ở 0,85, tắt ở 0,70). Số trên khung là điểm gian lận = 1 − P(bình thường); dòng
+"Nhãn thật" là nhãn CVAT tại thời điểm đó.
+
+![Điện thoại / tài liệu](docs/images/detect_phone.jpg)
+*S07 01:13: P4 dùng điện thoại, mô hình cảnh báo "điện thoại / tài liệu" (0,94); năm thí sinh còn lại dưới ngưỡng.*
+
+![Trao đổi](docs/images/detect_interaction.jpg)
+*S08 02:07: P1 chuyền giấy, mô hình cảnh báo "trao đổi" (0,94).*
+
+![Nhìn bài](docs/images/detect_looking.jpg)
+*S07 06:44: P5 quay ra sau, mô hình cảnh báo "nhìn bài" (0,97).*
 
 ## Giao diện
 
 **Danh sách sự kiện**: mỗi hành vi đáng ngờ kèm thí sinh, thời điểm trong video, độ tin cậy và trạng thái xác minh của giám thị.
 
 ![Danh sách sự kiện](docs/images/events.png)
-
-**Xác minh sự kiện**: giám thị xem lại đoạn video, rồi xác nhận vi phạm, bỏ qua (báo nhầm) hoặc đánh dấu cần xem lại. AI chỉ đánh dấu, quyết định thuộc về con người.
-
-<img src="docs/images/event_detail.png" alt="Xác minh sự kiện" width="360">
 
 **Live demo**: suy luận trên GPU đồng bộ với video, hiển thị khung và xác suất từng người, timeline cảnh báo so với nhãn thật, và so sánh các mô hình.
 
